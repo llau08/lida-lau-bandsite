@@ -21,7 +21,7 @@
   padding: 48px 80px 48px 80px;
 }
 
-.nav__logo {
+.nav__logo, .footer__logo {
   height: 1.25rem;
   width: 7.5rem;
 }
@@ -68,8 +68,18 @@
 }
 
 .about__header {
+  font-size: 2.25rem;
+  line-height: 2.75rem;
+  font-weight: 700;
   padding-top: 3rem;
   padding-bottom: 3rem;
+}
+
+.about__band {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 30%;
 }
 
 .about__quote {
@@ -82,4 +92,55 @@
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 600;
+}
+
+/*PHOTO GALLERY*/
+.gallery {
+  display: flex;
+  flex-direction: column;
+  padding-left: 2.25rem;
+  padding-right: 2.25rem;
+}
+
+.gallery__header {
+  font-size: 2.25rem;
+  line-height: 2.75rem;
+  font-weight: 700;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.gallery__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
+}
+
+.gallery__item {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  width: 25%;
+}
+
+/*FOOTER SECTION*/
+.footer {
+  background-color: #323232;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__header {
+  color: #e1e1e1;
+}
+
+.footer__social {
+  display: flex;
+  list-style-type: none;
+}
+
+.footer__logo {
+  display: flex;
+  justify-self: flex-end;
 }/*# sourceMappingURL=bio.css.map */

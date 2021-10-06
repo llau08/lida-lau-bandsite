@@ -55,12 +55,17 @@
 }
 
 .about__header {
+  @include section-header;
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
 
-// .about__img {
-// }
+.about__band {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 30%;
+}
 
 .about__quote {
   @include sub-header;
@@ -68,4 +73,58 @@
 
 .about__artist {
   @include sub-header;
+}
+
+/*PHOTO GALLERY*/
+.gallery {
+  display: flex;
+  flex-direction: column;
+  padding-left: 2.25rem;
+  padding-right: 2.25rem;
+}
+
+.gallery__header {
+  @include section-header;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.gallery__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
+}
+
+.gallery__item {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  width: 25%;
+}
+
+/*FOOTER SECTION*/
+.footer {
+  background-color: $black;
+  display: flex;
+  flex-direction: column;
+}
+
+// .footer__box--top {
+//   display: flex;
+// }
+
+.footer__header {
+  color: $mercury;
+}
+
+.footer__social {
+  display: flex;
+  list-style-type: none;
+}
+
+.footer__logo {
+  @extend .nav__logo;
+  display: flex;
+  justify-self: flex-end;
 }
