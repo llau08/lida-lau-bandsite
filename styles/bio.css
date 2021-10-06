@@ -1,2 +1,85 @@
+/*PRIMARY COLORS*/
+/*SECONDARY COLORS*/
+/*FONT STYLE*/
+@font-face {
+  font-family: "avenir";
+  src: url(/assets/fonts/AvenirNextLTPro-Regular.otf);
+  src: url(/assets/fonts/AvenirNextLTPro-Demi.otf);
+  src: url(/assets/fonts/AvenirNextLTPro-Bold.otf);
+}
+/*DESKTOP & TABLET TXT MIXINS*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-/*# sourceMappingURL=bio.css.map *//*# sourceMappingURL=bio.css.map */
+/*NAVIGATION BAR*/
+.nav {
+  display: flex;
+  background-color: #323232;
+  padding: 48px 80px 48px 80px;
+}
+
+.nav__logo {
+  height: 1.25rem;
+  width: 7.5rem;
+}
+
+.nav__list {
+  display: flex;
+  margin-left: 3rem;
+  list-style-type: none;
+}
+
+.nav__link {
+  margin: 1rem;
+  color: #e1e1e1;
+  text-decoration: none;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-weight: bold 700;
+}
+
+/*HERO SECTION*/
+.hero {
+  background-image: url(../assets/images/hero-bio.jpg);
+  height: 80vh;
+  background-size: cover;
+  display: flex;
+}
+
+.hero__header {
+  display: flex;
+  align-self: center;
+  color: #e1e1e1;
+  font-size: 3.75rem;
+  line-height: 4.25rem;
+  font-weight: bold 700;
+}
+
+/*ABOUT SECTION*/
+.about {
+  padding-left: 2.25rem;
+  padding-right: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about__header {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.about__quote {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+}
+
+.about__artist {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+}/*# sourceMappingURL=bio.css.map */

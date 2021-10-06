@@ -1,0 +1,55 @@
+/*PRIMARY COLORS*/
+$black: #323232;
+$silver: #afafaf;
+$white: #ffffff;
+
+/*SECONDARY COLORS*/
+$darkblack: #000000;
+$mercury: #e1e1e1;
+$alabaster: #fafafa;
+
+/*FONT STYLE*/
+@font-face {
+  font-family: "avenir";
+  src: url(/assets/fonts/AvenirNextLTPro-Regular.otf);
+  src: url(/assets/fonts/AvenirNextLTPro-Demi.otf);
+  src: url(/assets/fonts/AvenirNextLTPro-Bold.otf);
+}
+
+/*DESKTOP & TABLET TXT MIXINS*/
+
+@mixin page-header {
+  font-size: 3.75rem;
+  line-height: 4.25rem;
+  font-weight: bold 700;
+}
+
+@mixin section-header {
+  font-size: 2.25rem;
+  line-height: 2.75rem;
+  font-weight: 700;
+}
+
+@mixin sub-header {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+}
+
+@mixin body-copy {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-weight: 400;
+}
+
+@mixin footer-copy {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+}
+
+@mixin label-btn {
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-weight: bold 700;
+}

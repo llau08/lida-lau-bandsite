@@ -1,0 +1,71 @@
+@use "./partials/partials" as *;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*NAVIGATION BAR*/
+.nav {
+  display: flex;
+  background-color: $black;
+  padding: 48px 80px 48px 80px;
+}
+
+.nav__logo {
+  height: 1.25rem;
+  width: 7.5rem;
+}
+
+.nav__list {
+  display: flex;
+  margin-left: 3rem;
+  list-style-type: none;
+}
+
+.nav__link {
+  margin: 1rem;
+  color: $mercury;
+  text-decoration: none;
+  @include label-btn;
+}
+
+/*HERO SECTION*/
+.hero {
+  background-image: url(../assets/images/hero-bio.jpg);
+  height: 80vh;
+  background-size: cover;
+  display: flex;
+}
+
+.hero__header {
+  display: flex;
+  align-self: center;
+  color: $mercury;
+  @include page-header;
+}
+
+/*ABOUT SECTION*/
+.about {
+  padding-left: 2.25rem;
+  padding-right: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about__header {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+// .about__img {
+// }
+
+.about__quote {
+  @include sub-header;
+}
+
+.about__artist {
+  @include sub-header;
+}
