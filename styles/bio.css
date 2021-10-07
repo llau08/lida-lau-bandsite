@@ -1,13 +1,19 @@
-/*PRIMARY COLORS*/
-/*SECONDARY COLORS*/
 /*FONT STYLE*/
 @font-face {
-  font-family: "avenir";
+  font-family: "avenir-reg";
   src: url(/assets/fonts/AvenirNextLTPro-Regular.otf);
+}
+@font-face {
+  font-family: "avenir-demi";
   src: url(/assets/fonts/AvenirNextLTPro-Demi.otf);
+}
+@font-face {
+  font-family: "avenir-bold";
   src: url(/assets/fonts/AvenirNextLTPro-Bold.otf);
 }
-/*DESKTOP & TABLET TXT MIXINS*/
+/*PRIMARY COLORS*/
+/*SECONDARY COLORS*/
+/*MOBILE TXT STYLES*/
 * {
   margin: 0;
   padding: 0;
@@ -15,37 +21,51 @@
 }
 
 /*NAVIGATION BAR*/
+/*MOBILE*/
 .nav {
   display: flex;
+  flex-direction: column;
   background-color: #323232;
-  padding: 48px 80px 48px 80px;
+  padding: 16px 24px 16px 24px;
 }
 
 .nav__logo, .footer__logo {
+  margin: auto;
   height: 1.25rem;
   width: 7.5rem;
 }
 
 .nav__list {
   display: flex;
-  margin-left: 3rem;
+  justify-content: space-between;
   list-style-type: none;
+  padding-top: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .nav__link {
-  margin: 1rem;
   color: #e1e1e1;
   text-decoration: none;
-  font-size: 0.75rem;
-  line-height: 1.25rem;
-  font-weight: bold 700;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-weight: 600;
+  font-family: "avenir-demi";
+}
+
+.nav__link--active {
+  border-bottom: 2px solid #e1e1e1;
+  padding-bottom: 1.125rem;
 }
 
 /*HERO SECTION*/
 .hero {
   background-image: url(../assets/images/hero-bio.jpg);
-  height: 80vh;
   background-size: cover;
+  background-position: center;
+  height: 21vh;
+  padding-left: 1rem;
+  padding-right: 1rem;
   display: flex;
 }
 
@@ -53,66 +73,101 @@
   display: flex;
   align-self: center;
   color: #e1e1e1;
-  font-size: 3.75rem;
-  line-height: 4.25rem;
-  font-weight: bold 700;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  font-family: "avenir-bold";
 }
 
 /*ABOUT SECTION*/
 .about {
-  padding-left: 2.25rem;
-  padding-right: 2.25rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 .about__header {
-  font-size: 2.25rem;
-  line-height: 2.75rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
   font-weight: 700;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  font-family: "avenir-bold";
 }
 
 .about__band {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 30%;
 }
 
 .about__quote {
-  font-size: 1.5rem;
-  line-height: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  max-width: 300px;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
   font-weight: 600;
+  font-family: "avenir-demi";
 }
 
-.about__artist {
-  font-size: 1.5rem;
-  line-height: 2rem;
+.about__quotee {
+  padding-bottom: 1rem;
+  max-width: 18.75rem;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
   font-weight: 600;
+  font-family: "avenir-demi";
 }
 
-/*PHOTO GALLERY*/
+.about__musician {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-weight: 600;
+  font-family: "avenir-demi";
+}
+
+.about__txt--first {
+  max-width: 17.75rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+  font-family: "avenir-reg";
+}
+
+.about__txt--second {
+  max-width: 279px;
+  padding-bottom: 1rem;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+  font-family: "avenir-reg";
+}
+
+/*PHOTO GALLERY SECTION*/
 .gallery {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-color: #fafafa;
   display: flex;
   flex-direction: column;
-  padding-left: 2.25rem;
-  padding-right: 2.25rem;
 }
 
 .gallery__header {
-  font-size: 2.25rem;
-  line-height: 2.75rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
   font-weight: 700;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  font-family: "avenir-bold";
 }
 
 .gallery__list {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
   list-style-type: none;
 }
@@ -120,8 +175,8 @@
 .gallery__item {
   display: flex;
   flex-direction: column;
-  margin: 20px;
-  width: 25%;
+  padding-bottom: 1rem;
+  width: 100%;
 }
 
 /*FOOTER SECTION*/
@@ -129,18 +184,63 @@
   background-color: #323232;
   display: flex;
   flex-direction: column;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .footer__header {
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
   color: #e1e1e1;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  font-family: "avenir-bold";
 }
 
 .footer__social {
   display: flex;
+  flex-direction: row;
   list-style-type: none;
 }
 
+.footer__icons {
+  padding-right: 2rem;
+  padding-bottom: 1rem;
+}
+
+.footer__contact {
+  color: #e1e1e1;
+  list-style-type: none;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+  font-family: "avenir-reg";
+}
+
+.footer__person--name {
+  padding-bottom: 16px;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-weight: 600;
+  font-family: "avenir-demi";
+}
+
+.footer__person--info {
+  padding-bottom: 16px;
+}
+
 .footer__logo {
-  display: flex;
-  justify-self: flex-end;
+  margin: 0;
+  margin-top: 1.5rem;
+}
+
+.footer__copyright {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: #e1e1e1;
+  font-size: 0.625rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  font-family: "avenir-bold";
 }/*# sourceMappingURL=bio.css.map */

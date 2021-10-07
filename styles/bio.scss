@@ -1,4 +1,7 @@
 @use "./partials/partials" as *;
+@use "./partials/variables" as *;
+@use "./partials/mixins" as *;
+
 * {
   margin: 0;
   padding: 0;
@@ -6,35 +9,48 @@
 }
 
 /*NAVIGATION BAR*/
+/*MOBILE*/
 .nav {
   display: flex;
+  flex-direction: column;
   background-color: $black;
-  padding: 48px 80px 48px 80px;
+  padding: 16px 24px 16px 24px;
 }
 
 .nav__logo {
+  margin: auto;
   height: 1.25rem;
   width: 7.5rem;
 }
 
 .nav__list {
   display: flex;
-  margin-left: 3rem;
+  justify-content: space-between;
   list-style-type: none;
+  padding-top: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .nav__link {
-  margin: 1rem;
   color: $mercury;
   text-decoration: none;
-  @include label-btn;
+  @include sub-header;
+}
+
+.nav__link--active {
+  border-bottom: 2px solid $mercury;
+  padding-bottom: 1.125rem;
 }
 
 /*HERO SECTION*/
 .hero {
   background-image: url(../assets/images/hero-bio.jpg);
-  height: 80vh;
   background-size: cover;
+  background-position: center;
+  height: 21vh;
+  padding-left: 1rem;
+  padding-right: 1rem;
   display: flex;
 }
 
@@ -47,51 +63,72 @@
 
 /*ABOUT SECTION*/
 .about {
-  padding-left: 2.25rem;
-  padding-right: 2.25rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 .about__header {
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
   @include section-header;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
 }
 
 .about__band {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 30%;
 }
 
 .about__quote {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  max-width: 300px;
   @include sub-header;
 }
 
-.about__artist {
+.about__quotee {
+  padding-bottom: 1rem;
+  max-width: 18.75rem;
   @include sub-header;
 }
 
-/*PHOTO GALLERY*/
+.about__musician {
+  @include sub-header;
+}
+
+.about__txt--first {
+  max-width: 17.75rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  @include body-foot;
+}
+
+.about__txt--second {
+  max-width: 279px;
+  padding-bottom: 1rem;
+  @include body-foot;
+}
+
+/*PHOTO GALLERY SECTION*/
 .gallery {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-color: $alabaster;
   display: flex;
   flex-direction: column;
-  padding-left: 2.25rem;
-  padding-right: 2.25rem;
 }
 
 .gallery__header {
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
   @include section-header;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
 }
 
 .gallery__list {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
   list-style-type: none;
 }
@@ -99,8 +136,8 @@
 .gallery__item {
   display: flex;
   flex-direction: column;
-  margin: 20px;
-  width: 25%;
+  padding-bottom: 1rem;
+  width: 100%;
 }
 
 /*FOOTER SECTION*/
@@ -108,23 +145,52 @@
   background-color: $black;
   display: flex;
   flex-direction: column;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
-// .footer__box--top {
-//   display: flex;
-// }
-
 .footer__header {
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
   color: $mercury;
+  @include section-header;
 }
 
 .footer__social {
   display: flex;
+  flex-direction: row;
   list-style-type: none;
 }
 
+.footer__icons {
+  padding-right: 2rem;
+  padding-bottom: 1rem;
+}
+
+.footer__contact {
+  color: $mercury;
+  list-style-type: none;
+  @include body-foot;
+}
+
+.footer__person--name {
+  padding-bottom: 16px;
+  @include sub-header;
+}
+
+.footer__person--info {
+  padding-bottom: 16px;
+}
+
 .footer__logo {
+  margin: 0;
   @extend .nav__logo;
-  display: flex;
-  justify-self: flex-end;
+  margin-top: 1.5rem;
+}
+
+.footer__copyright {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: $mercury;
+  @include label-btn;
 }

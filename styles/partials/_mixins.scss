@@ -1,0 +1,35 @@
+/*MOBILE TXT STYLES*/
+@mixin page-header {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  font-family: "avenir-bold";
+}
+
+@mixin section-header {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  font-family: "avenir-bold";
+}
+
+@mixin sub-header {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-weight: 600;
+  font-family: "avenir-demi";
+}
+
+@mixin body-foot {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+  font-family: "avenir-reg";
+}
+
+@mixin label-btn {
+  font-size: 0.625rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  font-family: "avenir-bold";
+}
