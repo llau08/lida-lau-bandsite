@@ -14,6 +14,8 @@
 /*PRIMARY COLORS*/
 /*SECONDARY COLORS*/
 /*MOBILE TXT STYLES*/
+/*TABLET & DESKTOP TXT STYLES*/
+/*TABLET & DESKTOP MIXINS*/
 * {
   margin: 0;
   padding: 0;
@@ -28,13 +30,23 @@
   background-color: #323232;
   padding: 16px 24px 16px 24px;
 }
-
+@media screen and (min-width: 768px) {
+  .nav {
+    flex-direction: row;
+  }
+}
 .nav__logo, .footer__logo {
   margin: auto;
   height: 1.25rem;
   width: 7.5rem;
 }
-
+@media screen and (min-width: 768px) {
+  .nav__logo, .footer__logo {
+    margin: 0;
+    display: flex;
+    align-self: center;
+  }
+}
 .nav__list {
   display: flex;
   justify-content: space-between;
@@ -43,7 +55,6 @@
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
-
 .nav__link {
   color: #e1e1e1;
   text-decoration: none;
@@ -52,10 +63,18 @@
   font-weight: 600;
   font-family: "avenir-demi";
 }
-
+@media screen and (min-width: 768px) {
+  .nav__link {
+    display: flex;
+    align-content: center;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+  }
+}
 .nav__link--active {
-  border-bottom: 2px solid #e1e1e1;
-  padding-bottom: 1.125rem;
+  border-bottom: 3px solid #e1e1e1;
+  padding-bottom: 1.0625rem;
 }
 
 /*HERO SECTION*/
@@ -68,7 +87,6 @@
   padding-right: 1rem;
   display: flex;
 }
-
 .hero__header {
   display: flex;
   align-self: center;
@@ -86,7 +104,6 @@
   display: flex;
   flex-direction: column;
 }
-
 .about__header {
   padding-top: 1.5rem;
   padding-bottom: 1rem;
@@ -95,13 +112,11 @@
   font-weight: 700;
   font-family: "avenir-bold";
 }
-
 .about__band {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-
 .about__quote {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -111,7 +126,6 @@
   font-weight: 600;
   font-family: "avenir-demi";
 }
-
 .about__quotee {
   padding-bottom: 1rem;
   max-width: 18.75rem;
@@ -120,14 +134,12 @@
   font-weight: 600;
   font-family: "avenir-demi";
 }
-
 .about__musician {
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-weight: 600;
   font-family: "avenir-demi";
 }
-
 .about__txt--first {
   max-width: 17.75rem;
   padding-top: 1rem;
@@ -137,7 +149,6 @@
   font-weight: 400;
   font-family: "avenir-reg";
 }
-
 .about__txt--second {
   max-width: 279px;
   padding-bottom: 1rem;
@@ -155,7 +166,6 @@
   display: flex;
   flex-direction: column;
 }
-
 .gallery__header {
   padding-top: 1.5rem;
   padding-bottom: 1rem;
@@ -164,14 +174,12 @@
   font-weight: 700;
   font-family: "avenir-bold";
 }
-
 .gallery__list {
   display: flex;
   flex-direction: column;
   justify-content: center;
   list-style-type: none;
 }
-
 .gallery__item {
   display: flex;
   flex-direction: column;
@@ -187,7 +195,6 @@
   padding-left: 1rem;
   padding-right: 1rem;
 }
-
 .footer__header {
   padding-top: 1.5rem;
   padding-bottom: 1rem;
@@ -197,18 +204,15 @@
   font-weight: 700;
   font-family: "avenir-bold";
 }
-
 .footer__social {
   display: flex;
   flex-direction: row;
   list-style-type: none;
 }
-
 .footer__icons {
   padding-right: 2rem;
   padding-bottom: 1rem;
 }
-
 .footer__contact {
   color: #e1e1e1;
   list-style-type: none;
@@ -217,7 +221,6 @@
   font-weight: 400;
   font-family: "avenir-reg";
 }
-
 .footer__person--name {
   padding-bottom: 16px;
   font-size: 0.875rem;
@@ -225,16 +228,13 @@
   font-weight: 600;
   font-family: "avenir-demi";
 }
-
 .footer__person--info {
   padding-bottom: 16px;
 }
-
 .footer__logo {
   margin: 0;
   margin-top: 1.5rem;
 }
-
 .footer__copyright {
   padding-top: 1rem;
   padding-bottom: 1rem;
