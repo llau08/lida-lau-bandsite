@@ -1,3 +1,5 @@
+@use "./variables" as *;
+
 /*MOBILE TXT STYLES*/
 @mixin page-header {
   font-size: 1.5rem;
@@ -69,13 +71,13 @@
 
 /*TABLET & DESKTOP MIXINS*/
 @mixin tablet {
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet-breakpoint) {
     @content;
   }
 }
 
 @mixin desktop {
-  @media screen and (min-width: 1920px) {
+  @media screen and (min-width: $desktop-breakpoint) {
     @content;
   }
 }

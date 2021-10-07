@@ -52,6 +52,7 @@
   justify-content: space-between;
   list-style-type: none;
   padding-top: 1rem;
+  text-align: center;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
@@ -86,11 +87,23 @@
   padding-left: 1rem;
   padding-right: 1rem;
   display: flex;
+  position: relative;
+}
+.hero__overlay {
+  background-color: rgba(50, 50, 50, 0.5);
+  position: absolute;
+  display: flex;
+  justify-self: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 .hero__header {
   display: flex;
   align-self: center;
   color: #e1e1e1;
+  padding-left: 1rem;
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 700;
