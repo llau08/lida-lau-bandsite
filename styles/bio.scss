@@ -55,12 +55,26 @@
   &__item {
     width: 50%;
 
+    &:hover {
+      animation: nav-hover 0.5s;
+      animation-fill-mode: forwards;
+    }
+
     &--active {
       padding-bottom: 1.5rem;
       border-bottom: 2px solid $mercury;
 
       @include tablet {
         margin-right: 48px;
+      }
+    }
+
+    @keyframes nav-hover {
+      from {
+        border-bottom: 2px solid $black;
+      }
+      to {
+        border-bottom: 2px solid $mercury;
       }
     }
   }
@@ -262,6 +276,22 @@
     flex-direction: column;
     padding-bottom: 1rem;
     width: 100%;
+    filter: grayscale(100%);
+
+    &:hover {
+      animation: img-hover 0.3s linear;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes img-hover {
+      from {
+        filter: grayscale(100%);
+      }
+
+      to {
+        filter: grayscale(0%);
+      }
+    }
 
     @include tablet {
       margin: 10px;

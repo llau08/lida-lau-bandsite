@@ -68,6 +68,12 @@
 .nav__item {
   width: 50%;
 }
+.nav__item:hover {
+  -webkit-animation: nav-hover 0.5s;
+          animation: nav-hover 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
 .nav__item--active {
   padding-bottom: 1.5rem;
   border-bottom: 2px solid #e1e1e1;
@@ -77,12 +83,27 @@
     margin-right: 48px;
   }
 }
+@-webkit-keyframes nav-hover {
+  from {
+    border-bottom: 2px solid #323232;
+  }
+  to {
+    border-bottom: 2px solid #e1e1e1;
+  }
+}
+@keyframes nav-hover {
+  from {
+    border-bottom: 2px solid #323232;
+  }
+  to {
+    border-bottom: 2px solid #e1e1e1;
+  }
+}
 .nav__link {
   color: #e1e1e1;
   text-decoration: none;
   font-size: 0.875rem;
   line-height: 1.375rem;
-  font-weight: 600;
   font-family: "avenir-demi";
 }
 @media screen and (min-width: 768px) {
@@ -91,7 +112,6 @@
     align-content: center;
     font-size: 0.75rem;
     line-height: 1.25rem;
-    font-weight: 700;
     font-family: "avenir-bold";
   }
 }
@@ -132,7 +152,6 @@
   padding-left: 1rem;
   font-size: 1.5rem;
   line-height: 2rem;
-  font-weight: 700;
   font-family: "avenir-bold";
 }
 @media screen and (min-width: 768px) {
@@ -140,7 +159,6 @@
     padding-left: 2.25rem;
     font-size: 3.75rem;
     line-height: 4.25rem;
-    font-weight: 700;
     font-family: "avenir-bold";
   }
 }
@@ -160,7 +178,6 @@
   padding-bottom: 1rem;
   font-size: 1.5rem;
   line-height: 2rem;
-  font-weight: 700;
   font-family: "avenir-bold";
 }
 @media screen and (min-width: 768px) {
@@ -168,7 +185,6 @@
     padding-bottom: 2.25rem;
     font-size: 2.25rem;
     line-height: 2.75rem;
-    font-weight: 700;
     font-family: "avenir-bold";
   }
 }
@@ -188,14 +204,12 @@
   padding-top: 1rem;
   font-size: 0.875rem;
   line-height: 1.375rem;
-  font-weight: 600;
   font-family: "avenir-demi";
 }
 @media screen and (min-width: 768px) {
   .about__quote {
     font-size: 1.5rem;
     line-height: 2rem;
-    font-weight: 600;
     font-family: "avenir-demi";
   }
 }
@@ -203,7 +217,6 @@
   padding-bottom: 1rem;
   font-size: 0.875rem;
   line-height: 1.375rem;
-  font-weight: 600;
   font-family: "avenir-demi";
 }
 @media screen and (min-width: 768px) {
@@ -211,14 +224,12 @@
     padding-top: 1rem;
     font-size: 0.875rem;
     line-height: 1.375rem;
-    font-weight: 400;
     font-family: "avenir-reg";
   }
 }
 .about__musician {
   font-size: 0.875rem;
   line-height: 1.375rem;
-  font-weight: 600;
   font-family: "avenir-demi";
 }
 @media screen and (min-width: 768px) {
@@ -227,7 +238,6 @@
     padding-right: 2.25rem;
     font-size: 1.5rem;
     line-height: 2rem;
-    font-weight: 600;
     font-family: "avenir-demi";
   }
 }
@@ -236,14 +246,12 @@
   padding-bottom: 1rem;
   font-size: 0.8125rem;
   line-height: 1.125rem;
-  font-weight: 400;
   font-family: "avenir-reg";
 }
 @media screen and (min-width: 768px) {
   .about__txt--first {
     font-size: 0.875rem;
     line-height: 1.375rem;
-    font-weight: 400;
     font-family: "avenir-reg";
     width: 49%;
   }
@@ -252,14 +260,12 @@
   padding-bottom: 1rem;
   font-size: 0.8125rem;
   line-height: 1.125rem;
-  font-weight: 400;
   font-family: "avenir-reg";
 }
 @media screen and (min-width: 768px) {
   .about__txt--second {
     font-size: 0.875rem;
     line-height: 1.375rem;
-    font-weight: 400;
     font-family: "avenir-reg";
     width: 49%;
   }
@@ -292,7 +298,6 @@
   padding-bottom: 1rem;
   font-size: 1.5rem;
   line-height: 2rem;
-  font-weight: 700;
   font-family: "avenir-bold";
 }
 @media screen and (min-width: 768px) {
@@ -300,7 +305,6 @@
     padding-left: 0.5rem;
     font-size: 2.25rem;
     line-height: 2.75rem;
-    font-weight: 700;
     font-family: "avenir-bold";
   }
 }
@@ -323,6 +327,29 @@
   flex-direction: column;
   padding-bottom: 1rem;
   width: 100%;
+  filter: grayscale(100%);
+}
+.gallery__item:hover {
+  -webkit-animation: img-hover 0.3s linear;
+          animation: img-hover 0.3s linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+@-webkit-keyframes img-hover {
+  from {
+    filter: grayscale(100%);
+  }
+  to {
+    filter: grayscale(0%);
+  }
+}
+@keyframes img-hover {
+  from {
+    filter: grayscale(100%);
+  }
+  to {
+    filter: grayscale(0%);
+  }
 }
 @media screen and (min-width: 768px) {
   .gallery__item {
@@ -354,14 +381,12 @@
   color: #e1e1e1;
   font-size: 1.5rem;
   line-height: 2rem;
-  font-weight: 700;
   font-family: "avenir-bold";
 }
 @media screen and (min-width: 768px) {
   .footer__header {
     font-size: 2.25rem;
     line-height: 2.75rem;
-    font-weight: 700;
     font-family: "avenir-bold";
   }
 }
@@ -384,7 +409,6 @@
   list-style-type: none;
   font-size: 0.8125rem;
   line-height: 1.125rem;
-  font-weight: 400;
   font-family: "avenir-reg";
 }
 @media screen and (min-width: 768px) {
@@ -397,7 +421,6 @@
   padding-bottom: 16px;
   font-size: 0.875rem;
   line-height: 1.375rem;
-  font-weight: 600;
   font-family: "avenir-demi";
 }
 @media screen and (min-width: 768px) {
@@ -428,6 +451,5 @@
   color: #e1e1e1;
   font-size: 0.625rem;
   line-height: 1.25rem;
-  font-weight: 700;
   font-family: "avenir-bold";
 }/*# sourceMappingURL=bio.css.map */
