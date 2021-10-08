@@ -14,9 +14,10 @@
   display: flex;
   flex-direction: column;
   background-color: $black;
-  padding: 16px 24px 16px 24px;
+  padding: 16px 0;
 
   @include tablet {
+    padding-left: 2.25rem;
     flex-direction: row;
   }
 
@@ -38,25 +39,28 @@
     list-style-type: none;
     padding-top: 1rem;
     text-align: center;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+  }
+
+  &__item {
+    border-bottom: 2px solid $mercury;
+    width: 50%;
   }
 
   &__link {
     color: $mercury;
     text-decoration: none;
     @include sub-header;
+    &--active {
+      padding-bottom: 1.0625rem;
+      width: 50%;
+    }
 
     @include tablet {
       display: flex;
       align-content: center;
+      padding-right: 1.5rem;
       @include td-label-btn;
     }
-  }
-
-  &__link--active {
-    border-bottom: 3px solid $mercury;
-    padding-bottom: 1.0625rem;
   }
 }
 
@@ -65,11 +69,16 @@
   background-image: url(../assets/images/hero-bio.jpg);
   background-size: cover;
   background-position: center;
-  height: 21vh;
+  height: 13rem;
   padding-left: 1rem;
   padding-right: 1rem;
   display: flex;
   position: relative;
+
+  @include tablet {
+    background-position: bottom;
+    height: 28rem;
+  }
 
   &__overlay {
     background-color: rgba(50, 50, 50, 0.5);
@@ -88,43 +97,77 @@
     color: $mercury;
     padding-left: 1rem;
     @include page-header;
+
+    @include tablet {
+      padding-left: 2.25rem;
+      @include td-page-header;
+    }
   }
 }
 
 /*ABOUT SECTION*/
 .about {
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding: 16px 24px 16px 24px;
   display: flex;
   flex-direction: column;
 
+  @include tablet {
+    padding: 36px 48px 36px 48px;
+  }
+
   &__header {
-    padding-top: 1.5rem;
     padding-bottom: 1rem;
     @include section-header;
+
+    @include tablet {
+      padding-bottom: 2.25rem;
+      @include td-section-header;
+    }
   }
 
   &__band {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    @include tablet {
+      padding-left: 2.25rem;
+      padding-right: 2.25rem;
+      padding-bottom: 2.25rem;
+    }
   }
 
   &__quote {
     padding-top: 1rem;
-    padding-bottom: 1rem;
     max-width: 300px;
     @include sub-header;
+
+    @include tablet {
+      max-width: 50rem;
+      @include td-sub-header;
+    }
   }
 
   &__quotee {
     padding-bottom: 1rem;
     max-width: 18.75rem;
     @include sub-header;
+
+    @include tablet {
+      padding-top: 1rem;
+      max-width: 31.25rem;
+      @include td-body-foot;
+    }
   }
 
   &__musician {
     @include sub-header;
+
+    @include tablet {
+      padding-left: 2.25rem;
+      padding-right: 2.25rem;
+      @include td-sub-header;
+    }
   }
 
   &__txt--first {
@@ -132,12 +175,29 @@
     padding-top: 1rem;
     padding-bottom: 1rem;
     @include body-foot;
+
+    @include tablet {
+      @include td-body-foot;
+    }
   }
 
   &__txt--second {
     max-width: 279px;
     padding-bottom: 1rem;
     @include body-foot;
+
+    @include tablet {
+      @include td-body-foot;
+    }
+  }
+
+  &__container {
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+      padding-left: 2.25rem;
+      padding-right: 2.25rem;
+    }
   }
 }
 
@@ -149,10 +209,20 @@
   display: flex;
   flex-direction: column;
 
+  @include tablet {
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+  }
+
   &__header {
     padding-top: 1.5rem;
     padding-bottom: 1rem;
     @include section-header;
+
+    @include tablet {
+      padding-left: 0.5rem;
+      @include td-section-header;
+    }
   }
 
   &__list {
@@ -160,6 +230,13 @@
     flex-direction: column;
     justify-content: center;
     list-style-type: none;
+
+    @include tablet {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding-bottom: 2.25rem;
+    }
   }
 
   &__item {
@@ -167,6 +244,12 @@
     flex-direction: column;
     padding-bottom: 1rem;
     width: 100%;
+
+    @include tablet {
+      margin: 10px;
+      padding: 0;
+      width: 30%;
+    }
   }
 }
 
@@ -178,17 +261,33 @@
   padding-left: 1rem;
   padding-right: 1rem;
 
+  @include tablet {
+    padding: 36px 48px 36px 48px;
+    &__lists {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
   &__header {
     padding-top: 1.5rem;
     padding-bottom: 1rem;
     color: $mercury;
     @include section-header;
+
+    @include tablet {
+      @include td-section-header;
+    }
   }
 
   &__social {
     display: flex;
-    flex-direction: row;
+    align-self: center;
     list-style-type: none;
+
+    @include tablet {
+      padding-left: 2rem;
+    }
   }
 
   &__icons {
@@ -200,21 +299,39 @@
     color: $mercury;
     list-style-type: none;
     @include body-foot;
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
-  &__person--name {
+  &__person--bold {
     padding-bottom: 16px;
     @include sub-header;
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
-  &__person--info {
+  &__person {
     padding-bottom: 16px;
+    display: flex;
+    justify-content: column;
   }
 
   &__logo {
     margin: 0;
     @extend .nav__logo;
     margin-top: 1.5rem;
+
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+    }
   }
 
   &__copyright {
