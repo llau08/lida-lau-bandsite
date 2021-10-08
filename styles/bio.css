@@ -28,12 +28,17 @@
   display: flex;
   flex-direction: column;
   background-color: #323232;
-  padding: 16px 0;
+  padding-top: 16px;
 }
 @media screen and (min-width: 768px) {
   .nav {
     padding-left: 2.25rem;
     flex-direction: row;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .nav {
+    padding-left: 5rem;
   }
 }
 .nav__logo, .footer__logo {
@@ -50,14 +55,27 @@
 }
 .nav__list {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   list-style-type: none;
   padding-top: 1rem;
   text-align: center;
 }
+@media screen and (min-width: 768px) {
+  .nav__list {
+    margin-left: 48px;
+  }
+}
 .nav__item {
-  border-bottom: 2px solid #e1e1e1;
   width: 50%;
+}
+.nav__item--active {
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #e1e1e1;
+}
+@media screen and (min-width: 768px) {
+  .nav__item--active {
+    margin-right: 48px;
+  }
 }
 .nav__link {
   color: #e1e1e1;
@@ -67,15 +85,10 @@
   font-weight: 600;
   font-family: "avenir-demi";
 }
-.nav__link--active {
-  padding-bottom: 1.0625rem;
-  width: 50%;
-}
 @media screen and (min-width: 768px) {
   .nav__link {
     display: flex;
     align-content: center;
-    padding-right: 1.5rem;
     font-size: 0.75rem;
     line-height: 1.25rem;
     font-weight: 700;
@@ -98,6 +111,8 @@
   .hero {
     background-position: bottom;
     height: 28rem;
+    padding-left: 48px;
+    padding-right: 3rem;
   }
 }
 .hero__overlay {
@@ -171,7 +186,6 @@
 }
 .about__quote {
   padding-top: 1rem;
-  max-width: 300px;
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-weight: 600;
@@ -179,7 +193,6 @@
 }
 @media screen and (min-width: 768px) {
   .about__quote {
-    max-width: 50rem;
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 600;
@@ -188,7 +201,6 @@
 }
 .about__quotee {
   padding-bottom: 1rem;
-  max-width: 18.75rem;
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-weight: 600;
@@ -197,7 +209,6 @@
 @media screen and (min-width: 768px) {
   .about__quotee {
     padding-top: 1rem;
-    max-width: 31.25rem;
     font-size: 0.875rem;
     line-height: 1.375rem;
     font-weight: 400;
@@ -221,7 +232,6 @@
   }
 }
 .about__txt--first {
-  max-width: 17.75rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
   font-size: 0.8125rem;
@@ -235,10 +245,10 @@
     line-height: 1.375rem;
     font-weight: 400;
     font-family: "avenir-reg";
+    width: 49%;
   }
 }
 .about__txt--second {
-  max-width: 279px;
   padding-bottom: 1rem;
   font-size: 0.8125rem;
   line-height: 1.125rem;
@@ -251,6 +261,7 @@
     line-height: 1.375rem;
     font-weight: 400;
     font-family: "avenir-reg";
+    width: 49%;
   }
 }
 @media screen and (min-width: 768px) {
@@ -335,7 +346,6 @@
   }
   .footer__lists {
     display: flex;
-    justify-content: space-between;
   }
 }
 .footer__header {
@@ -408,8 +418,8 @@
 @media screen and (min-width: 768px) {
   .footer__logo {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+    align-self: flex-end;
+    position: absolute;
   }
 }
 .footer__copyright {

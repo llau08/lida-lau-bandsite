@@ -1,4 +1,4 @@
-@use "./partials/partials" as *;
+@use "./partials/global" as *;
 @use "./partials/variables" as *;
 @use "./partials/mixins" as *;
 
@@ -14,11 +14,15 @@
   display: flex;
   flex-direction: column;
   background-color: $black;
-  padding: 16px 0;
+  padding-top: 16px;
 
   @include tablet {
     padding-left: 2.25rem;
     flex-direction: row;
+  }
+
+  @include desktop {
+    padding-left: 5rem;
   }
 
   &__logo {
@@ -31,34 +35,44 @@
       display: flex;
       align-self: center;
     }
+
+    @include desktop {
+    }
   }
 
   &__list {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     list-style-type: none;
     padding-top: 1rem;
     text-align: center;
+
+    @include tablet {
+      margin-left: 48px;
+    }
   }
 
   &__item {
-    border-bottom: 2px solid $mercury;
     width: 50%;
+
+    &--active {
+      padding-bottom: 1.5rem;
+      border-bottom: 2px solid $mercury;
+
+      @include tablet {
+        margin-right: 48px;
+      }
+    }
   }
 
   &__link {
     color: $mercury;
     text-decoration: none;
     @include sub-header;
-    &--active {
-      padding-bottom: 1.0625rem;
-      width: 50%;
-    }
 
     @include tablet {
       display: flex;
       align-content: center;
-      padding-right: 1.5rem;
       @include td-label-btn;
     }
   }
@@ -78,6 +92,8 @@
   @include tablet {
     background-position: bottom;
     height: 28rem;
+    padding-left: 48px;
+    padding-right: 3rem;
   }
 
   &__overlay {
@@ -139,23 +155,23 @@
 
   &__quote {
     padding-top: 1rem;
-    max-width: 300px;
+    // max-width: 300px;
     @include sub-header;
 
     @include tablet {
-      max-width: 50rem;
+      // max-width: 50rem;
       @include td-sub-header;
     }
   }
 
   &__quotee {
     padding-bottom: 1rem;
-    max-width: 18.75rem;
+    // max-width: 18.75rem;
     @include sub-header;
 
     @include tablet {
       padding-top: 1rem;
-      max-width: 31.25rem;
+      // max-width: 31.25rem;
       @include td-body-foot;
     }
   }
@@ -171,23 +187,25 @@
   }
 
   &__txt--first {
-    max-width: 17.75rem;
+    // max-width: 17.75rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
     @include body-foot;
 
     @include tablet {
       @include td-body-foot;
+      width: 49%;
     }
   }
 
   &__txt--second {
-    max-width: 279px;
+    // max-width: 279px;
     padding-bottom: 1rem;
     @include body-foot;
 
     @include tablet {
       @include td-body-foot;
+      width: 49%;
     }
   }
 
@@ -265,7 +283,7 @@
     padding: 36px 48px 36px 48px;
     &__lists {
       display: flex;
-      justify-content: space-between;
+      // position: absolute;
     }
   }
 
@@ -329,8 +347,8 @@
 
     @include tablet {
       display: flex;
-      flex-direction: row;
-      justify-content: flex-end;
+      align-self: flex-end;
+      position: absolute;
     }
   }
 
