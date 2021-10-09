@@ -110,6 +110,13 @@
     padding-right: 3rem;
   }
 
+  @include desktop {
+    padding-left: 5rem;
+    padding-right: 5rem;
+    background-position: center -4rem;
+    height: 38rem;
+  }
+
   &__overlay {
     background-color: rgba(50, 50, 50, 0.5);
     position: absolute;
@@ -132,6 +139,9 @@
       padding-left: 2.25rem;
       @include td-page-header;
     }
+    @include desktop {
+      padding-left: 5rem;
+    }
   }
 }
 
@@ -145,6 +155,11 @@
     padding: 36px 48px 36px 48px;
   }
 
+  @include desktop {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
   &__header {
     padding-bottom: 1rem;
     @include section-header;
@@ -152,6 +167,10 @@
     @include tablet {
       padding-bottom: 2.25rem;
       @include td-section-header;
+    }
+
+    @include desktop {
+      padding-left: 3rem;
     }
   }
 
@@ -165,6 +184,24 @@
       padding-right: 2.25rem;
       padding-bottom: 2.25rem;
     }
+
+    @include desktop {
+      padding-left: 3rem;
+      padding-right: 3rem;
+      width: 55rem;
+      // display: flex;
+      // justify-content: center;
+    }
+  }
+
+  &__img {
+    @include tablet {
+      height: 22rem;
+    }
+
+    @include desktop {
+      height: 30rem;
+    }
   }
 
   &__quote {
@@ -175,6 +212,11 @@
     @include tablet {
       // max-width: 50rem;
       @include td-sub-header;
+    }
+
+    @include desktop {
+      padding-left: 3rem;
+      padding-right: 3rem;
     }
   }
 
@@ -188,6 +230,11 @@
       // max-width: 31.25rem;
       @include td-body-foot;
     }
+
+    @include desktop {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
   }
 
   &__musician {
@@ -197,6 +244,11 @@
       padding-left: 2.25rem;
       padding-right: 2.25rem;
       @include td-sub-header;
+    }
+
+    @include desktop {
+      padding-left: 3rem;
+      padding-right: 3rem;
     }
   }
 
@@ -229,6 +281,11 @@
       justify-content: space-between;
       padding-left: 2.25rem;
       padding-right: 2.25rem;
+    }
+
+    @include desktop {
+      padding-left: 3rem;
+      padding-right: 3rem;
     }
   }
 }
@@ -268,6 +325,10 @@
       flex-wrap: wrap;
       justify-content: space-between;
       padding-bottom: 2.25rem;
+    }
+
+    @include desktop {
+      justify-content: center;
     }
   }
 
@@ -313,7 +374,16 @@
     padding: 36px 48px 36px 48px;
     &__lists {
       display: flex;
-      // position: absolute;
+      justify-content: space-between;
+    }
+
+    &__container {
+      display: flex;
+    }
+  }
+  &__lists {
+    @include desktop {
+      width: 56.5%;
     }
   }
 
@@ -334,13 +404,21 @@
     list-style-type: none;
 
     @include tablet {
-      padding-left: 2rem;
+      display: flex;
+      align-self: center;
     }
   }
 
   &__icons {
     padding-right: 2rem;
     padding-bottom: 1rem;
+
+    @include tablet {
+      padding-right: 0;
+      padding-bottom: 0;
+      padding-left: 2.2rem;
+      padding-top: 0.5rem;
+    }
   }
 
   &__contact {
@@ -352,6 +430,12 @@
       display: flex;
       flex-direction: column;
     }
+  }
+
+  &__emails {
+    color: $white;
+    @include body-foot;
+    text-decoration: none;
   }
 
   &__person--bold {
@@ -379,6 +463,7 @@
       display: flex;
       align-self: flex-end;
       position: absolute;
+      margin-top: 2rem;
     }
   }
 
