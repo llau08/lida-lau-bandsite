@@ -1,6 +1,7 @@
 @use "./partials/global" as *;
 @use "./partials/variables" as *;
 @use "./partials/mixins" as *;
+@use "./partials/animations" as *;
 
 * {
   margin: 0;
@@ -9,20 +10,22 @@
 }
 
 /*NAVIGATION BAR*/
-/*MOBILE*/
 .nav {
   display: flex;
   flex-direction: column;
   background-color: $black;
-  padding-top: 16px;
+  padding-top: 1rem;
 
   @include tablet {
     padding-left: 2.25rem;
+    padding-right: 2.25rem;
     flex-direction: row;
   }
 
   @include desktop {
     padding-left: 5rem;
+    padding-right: 5rem;
+    padding-top: 2.25rem;
   }
 
   &__logo {
@@ -34,9 +37,11 @@
       margin: 0;
       display: flex;
       align-self: center;
+      margin-bottom: 0.5rem;
     }
 
     @include desktop {
+      margin-bottom: 1rem;
     }
   }
 
@@ -48,7 +53,7 @@
     text-align: center;
 
     @include tablet {
-      margin-left: 48px;
+      margin-left: 64px;
     }
   }
 
@@ -61,11 +66,12 @@
     }
 
     &--active {
-      padding-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
       border-bottom: 2px solid $mercury;
 
       @include tablet {
-        margin-right: 48px;
+        margin-right: 3rem;
+        border-bottom: 3px solid $mercury;
       }
     }
 
@@ -82,12 +88,14 @@
   &__link {
     color: $mercury;
     text-decoration: none;
-    @include sub-header;
+    @include body-foot;
 
     @include tablet {
       display: flex;
       align-content: center;
-      @include td-label-btn;
+      font-weight: 700;
+      @include td-body-foot;
+      padding-bottom: 1.5rem;
     }
   }
 }
@@ -97,7 +105,7 @@
   background-image: url(../assets/images/hero-bio.jpg);
   background-size: cover;
   background-position: center;
-  height: 13rem;
+  height: 12rem;
   padding-left: 1rem;
   padding-right: 1rem;
   display: flex;
@@ -106,7 +114,7 @@
   @include tablet {
     background-position: bottom;
     height: 28rem;
-    padding-left: 48px;
+    padding-left: 3rem;
     padding-right: 3rem;
   }
 
@@ -155,17 +163,12 @@
     padding: 36px 48px 36px 48px;
   }
 
-  @include desktop {
-    padding-left: 3rem;
-    padding-right: 3rem;
-  }
-
   &__header {
     padding-bottom: 1rem;
     @include section-header;
 
     @include tablet {
-      padding-bottom: 2.25rem;
+      padding-bottom: 1.5rem;
       @include td-section-header;
     }
 
@@ -180,37 +183,43 @@
     justify-content: center;
 
     @include tablet {
-      padding-left: 2.25rem;
-      padding-right: 2.25rem;
       padding-bottom: 2.25rem;
     }
 
     @include desktop {
       padding-left: 3rem;
       padding-right: 3rem;
-      width: 55rem;
-      // display: flex;
-      // justify-content: center;
     }
   }
-
+  /*FIGURE OUT IMG HEIGHT & WIDTH*/
   &__img {
+    height: 10rem;
+    width: 17rem;
+
     @include tablet {
-      height: 22rem;
+      height: 19rem;
+      width: 34.5rem;
+      margin: auto;
     }
 
     @include desktop {
       height: 30rem;
+      width: 57rem;
     }
   }
-
+  /*DOUBLE CHECK THIS FONT SIZE & FIX THE 'TO'*/
   &__quote {
     padding-top: 1rem;
-    // max-width: 300px;
-    @include sub-header;
+    width: 265px;
+    font-weight: 700;
+    @include body-foot;
 
     @include tablet {
-      // max-width: 50rem;
+      padding-top: 2.25rem;
+      width: 609px;
+      margin: auto;
+      padding-left: 36px;
+      padding-right: 36px;
       @include td-sub-header;
     }
 
@@ -221,13 +230,13 @@
   }
 
   &__quotee {
+    padding-top: 1rem;
     padding-bottom: 1rem;
-    // max-width: 18.75rem;
-    @include sub-header;
+    max-width: 250px;
+    @include body-foot;
 
     @include tablet {
       padding-top: 1rem;
-      // max-width: 31.25rem;
       @include td-body-foot;
     }
 
@@ -238,7 +247,7 @@
   }
 
   &__musician {
-    @include sub-header;
+    @include body-foot;
 
     @include tablet {
       padding-left: 2.25rem;
@@ -253,9 +262,9 @@
   }
 
   &__txt--first {
-    // max-width: 17.75rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    width: 17.5625rem;
     @include body-foot;
 
     @include tablet {
@@ -265,8 +274,8 @@
   }
 
   &__txt--second {
-    // max-width: 279px;
     padding-bottom: 1rem;
+    width: 17.4375rem;
     @include body-foot;
 
     @include tablet {
@@ -440,7 +449,8 @@
 
   &__person--bold {
     padding-bottom: 16px;
-    @include sub-header;
+    font-weight: 600;
+    @include body-foot;
 
     @include tablet {
       display: flex;
@@ -467,10 +477,12 @@
     }
   }
 
+  /*ASK WHY THIS FONT WON'T FIT*/
   &__copyright {
     padding-top: 1rem;
     padding-bottom: 1rem;
-    color: $mercury;
+    color: $white;
+    width: 300px;
     @include label-btn;
   }
 }
