@@ -214,12 +214,13 @@
     font-weight: 700;
     @include body-foot;
 
+    /*ASK ABOUT THIS PART*---->*/
     @include tablet {
       padding-top: 2.25rem;
       width: 609px;
-      margin: auto;
-      padding-left: 36px;
-      padding-right: 36px;
+      margin-left: 36px;
+      // padding-left: 36px;
+      // padding-right: 36px;
       @include td-sub-header;
     }
 
@@ -237,6 +238,9 @@
 
     @include tablet {
       padding-top: 1rem;
+      padding-left: 36px;
+      max-width: 400px;
+      font-weight: bold;
       @include td-body-foot;
     }
 
