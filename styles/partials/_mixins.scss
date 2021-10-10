@@ -4,7 +4,7 @@
 @mixin page-header {
   font-size: 1.5rem;
   line-height: 2rem;
-  font-family: "avenir-reg";
+  font-family: "avenir-demi";
 }
 
 @mixin section-header {
@@ -38,35 +38,30 @@
 @mixin td-page-header {
   font-size: 3.75rem;
   line-height: 4.25rem;
-  font-weight: 700;
   font-family: "avenir-demi";
 }
 
 @mixin td-section-header {
   font-size: 2.25rem;
   line-height: 2.75rem;
-  font-weight: 700;
   font-family: "avenir-demi";
 }
 
 @mixin td-sub-header {
   font-size: 1.5rem;
   line-height: 2rem;
-  font-weight: 600;
   font-family: "avenir-demi";
 }
 
 @mixin td-body-foot {
   font-size: 0.875rem;
   line-height: 1.375rem;
-  font-weight: 400;
   font-family: "avenir-reg";
 }
 
 @mixin td-label-btn {
   font-size: 0.75rem;
   line-height: 1.25rem;
-  font-weight: 700;
   font-family: "avenir-bold";
 }
 

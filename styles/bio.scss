@@ -15,37 +15,29 @@
   flex-direction: column;
   background-color: $black;
   padding-top: 16px;
-  width: 100%;
-  // width: 320px;
+  min-width: 320px;
   /*<---fixed navigation to TOP--->*/
   // position: fixed;
+  // width: 100%;
   // top: 0;
   // z-index: 1;
 
   @include tablet {
-    padding-left: 36px;
-    padding-right: 36px;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
     flex-direction: row;
-    // width: 768px;
   }
 
   @include desktop {
-    padding-left: 80px;
-    padding-right: 80px;
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
-  // width: 1280px;
 
-  // @include desktop {
-  //   padding-left: 5rem;
-  //   padding-right: 5rem;
-  //   padding-top: 2.25rem;
-  // }
-
-  /*<---nav LOGO--->*/
+  /*<---Nav LOGO--->*/
   &__logo {
     margin: auto;
-    height: 20px;
-    width: 120px;
+    height: 1.25rem;
+    width: 7.5rem;
 
     @include tablet {
       margin: 0;
@@ -55,24 +47,20 @@
     }
   }
 
-  // @include desktop {
-  //   margin-bottom: 1rem;
-  // }
-  /*<---nav links--->*/
+  /*<---Nav Links--->*/
   &__list {
     display: flex;
     justify-content: space-evenly;
     list-style-type: none;
     padding-top: 16px;
-    // width: 320px;
     text-align: center;
 
     @include tablet {
-      padding-left: 24px;
-      width: 275px;
+      padding-left: 1.5rem;
+      width: 17.1875rem;
     }
   }
-  /*ITEM HOVERS*/
+  /*<---Nav List Item Hover--->*/
   &__item {
     width: 50%;
     display: flex;
@@ -91,11 +79,10 @@
     &--active {
       padding-bottom: 0.5rem;
       color: $white;
-      border-bottom: 3px solid $mercury;
+      border-bottom: 3px solid $white;
 
       @include tablet {
-        // margin-right: 1rem;
-        border-bottom: 3px solid $mercury;
+        border-bottom: 3px solid $white;
         width: 25%;
       }
     }
@@ -105,11 +92,12 @@
         border-bottom: 3px solid $black;
       }
       to {
-        border-bottom: 3px solid $mercury;
+        border-bottom: 3px solid $white;
       }
     }
   }
-  /*nav links--*/
+
+  /*<---Nav Links--->*/
   &__link {
     color: $mercury;
     text-decoration: none;
@@ -118,13 +106,13 @@
     @include tablet {
       display: flex;
       align-content: center;
-      font-weight: 700;
       @include td-body-foot;
       padding-bottom: 1.5rem;
     }
 
-    &__link--bold {
+    &--bold {
       font-weight: bold;
+      color: $white;
     }
   }
 }
@@ -138,31 +126,22 @@
   background-position: center;
   margin-top: 5rem;
   height: 12rem;
-  width: 100%;
+  min-width: 320px;
   margin: auto;
   display: flex;
   position: relative;
 
   @include tablet {
-    width: 100%;
     background-position: bottom;
     height: 28rem;
-    padding-left: 36px;
-    padding-right: 36px;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
   }
 
   @include desktop {
-    width: 100%;
-    background-position: center;
+    background-position: center -4rem;
     height: 37rem;
   }
-
-  // @include desktop {
-  //   padding-left: 5rem;
-  //   padding-right: 5rem;
-  //   background-position: center -4rem;
-  //   height: 38rem;
-  // }
 
   /*<---Overlay Background--->*/
   &__overlay {
@@ -174,17 +153,17 @@
     bottom: 0;
     left: 0;
     right: 0;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 1rem;
+    padding-right: 1rem;
 
     @include tablet {
-      padding-left: 36px;
-      padding-right: 36px;
+      padding-left: 2.25rem;
+      padding-right: 2.25rem;
     }
 
     @include desktop {
-      padding-left: 80px;
-      padding-right: 80px;
+      padding-left: 5rem;
+      padding-right: 5rem;
     }
   }
 
@@ -205,204 +184,206 @@
 /*ABOUT SECTION*/
 /*<---Main About Box--->*/
 .about {
+  margin: auto;
   padding: 24px 16px;
   display: flex;
   flex-direction: column;
+  min-width: 320px;
   width: 320px;
-  margin: auto;
 
   @include tablet {
     padding: 48px 36px 36px 36px;
+    min-width: 768px;
     width: 768px;
   }
 
   @include desktop {
-    padding-left: 80px;
-    padding-right: 80px;
-    width: 1280px;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    min-width: 1280px;
+    width: 1920px;
   }
+
   /*<---About Musicians Header--->*/
   &__header {
-    padding-bottom: 16px;
+    padding-bottom: 1rem;
     @include section-header;
 
     @include tablet {
-      padding-bottom: 36px;
+      padding-bottom: 2.25rem;
       @include td-section-header;
     }
-
-    // @include desktop {
-    //   width: 80%;
-    //   // padding-left: 3rem;
-    // }
   }
+
   /*<---Band Img Box--->*/
   &__band {
     display: flex;
     flex-direction: column;
+    margin: auto;
 
     @include tablet {
       margin: auto;
-      padding-bottom: 36px;
+      padding-bottom: 2.25rem;
     }
 
     @include desktop {
       margin: auto;
     }
   }
+
   /*<---Band Img--->*/
   &__img {
     height: 11rem;
+    width: 18.0625rem;
 
     @include tablet {
       margin: auto;
-      padding-bottom: 36px;
+      padding-bottom: 2.25rem;
       height: 22rem;
-      width: 36rem;
+      width: 84%;
     }
 
     @include desktop {
       height: 37rem;
-      width: 59rem;
+      min-width: 59rem;
     }
   }
   /*<---Band Quote/Quotee--->*/
   &__quote {
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 300px;
     font-weight: 700;
     @include sub-header;
 
     @include tablet {
-      margin-left: 60px;
-      margin-right: 60px;
+      margin-left: 3.75rem;
+      margin-right: 3.75rem;
       padding-top: 0;
+      width: 610px;
       @include td-sub-header;
     }
 
     @include desktop {
-      margin-left: 85px;
-      margin-right: 85px;
+      margin-left: 8%;
+      width: 64%;
     }
   }
 
   &__quotee {
-    // max-width: 250px;
     @include body-foot;
 
     @include tablet {
-      margin-left: 60px;
-      @include td-sub-header;
+      margin-left: 3.75rem;
+      font-size: 1.125rem;
+      line-height: 1.375rem;
+      font-family: "avenir-demi";
     }
     @include desktop {
-      margin-left: 85px;
-      margin-right: 85px;
+      margin-left: 8%;
     }
   }
   /*<---Musician Title (The Bees Knees)--->*/
   &__musician {
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     @include body-foot;
 
     @include tablet {
-      margin: auto;
-      padding-left: 60px;
+      margin-left: 3.75rem;
+      margin-right: 3.75rem;
       @include td-sub-header;
     }
     @include desktop {
       padding-left: 0;
       padding-right: 0;
-      margin-left: 85px;
-      margin-right: 85px;
+      margin-left: 5.3125rem;
+      margin-right: 5.3125rem;
     }
   }
   /*<---Txt Box--->*/
   &__txt--first {
-    width: 283px;
-    padding-bottom: 16px;
+    width: 17.6875rem;
+    padding-bottom: 1rem;
     @include body-foot;
 
     @include tablet {
       @include td-body-foot;
       padding-bottom: 0;
-      width: 279px;
+      width: 17.4375rem;
     }
 
     @include desktop {
-      width: 415px;
+      width: 25.9375rem;
     }
   }
 
   &__txt--second {
-    width: 279px;
+    width: 17.4375rem;
     @include body-foot;
 
     @include tablet {
       @include td-body-foot;
-      width: 279px;
+      width: 17.4375rem;
     }
 
     @include desktop {
-      width: 415px;
+      width: 25.9375rem;
     }
   }
 
   &__container {
     @include tablet {
+      margin: auto;
       display: flex;
       justify-content: space-between;
-      padding-left: 60px;
-      padding-right: 60px;
+      padding-left: 3.75rem;
+      padding-right: 3.75rem;
     }
     @include desktop {
-      padding-left: 85px;
-      padding-right: 85px;
+      padding-left: 5.3125rem;
+      padding-right: 5.3125rem;
     }
   }
 }
 
 /*PHOTO GALLERY SECTION*/
-/*<---Gallery Box--->*/
+/*<---Entire Gallery Box--->*/
 .gallery {
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 1rem;
+  padding-right: 1rem;
   background-color: $alabaster;
-  width: 320px;
+  width: 100%;
+  min-width: 320px;
   margin: auto;
 
   @include tablet {
     display: flex;
     flex-direction: column;
     padding: 48px 36px 20px 36px;
-    width: 768px;
   }
 
   @include desktop {
-    padding-left: 80px;
-    padding-right: 80px;
-    width: 1280px;
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 
   /*<---Photo Gallery Header--->*/
   &__header {
-    padding-top: 24px;
-    padding-bottom: 16px;
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
     @include section-header;
 
     @include tablet {
       padding-top: 0;
-      padding-bottom: 36px;
+      padding-bottom: 2.25rem;
       @include td-section-header;
     }
   }
 
-  &__list {
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
-    // list-style-type: none;
+  /*<---Gallery Photo List Container--->*/
 
+  &__list {
     @include tablet {
       display: flex;
       flex-direction: row;
@@ -411,19 +392,17 @@
     }
   }
 
+  /*<---Gallery Photos--->*/
+
   &__item {
     display: flex;
     flex-direction: column;
-    padding-bottom: 16px;
+    padding-bottom: 1rem;
     filter: grayscale(100%);
 
     @include tablet {
       width: 32%;
     }
-
-    // @include desktop {
-    //   width: 40%;
-    // }
 
     &:hover {
       animation: img-hover 0.3s linear;
@@ -450,17 +429,18 @@
   padding-left: 1rem;
   padding-right: 1rem;
   position: relative;
-  width: 100%;
-  // width: 320px;
+  min-width: 320px;
+  // max-width: 767px;
   margin: auto;
 
   @include tablet {
     padding: 32px 36px 36px 36px;
-    // width: 768px;
+    // min-width: 768px;
+    // max-width: ;
 
     &__container {
       display: flex;
-      padding-bottom: 20px;
+      padding-bottom: 1.25rem;
     }
 
     &__lists {
@@ -478,10 +458,11 @@
       width: 58%;
     }
   }
+
   /*<---Footer Header (Get in Touch)--->*/
   &__header {
-    padding-top: 24px;
-    padding-bottom: 16px;
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
     color: $white;
     @include section-header;
 
@@ -490,6 +471,7 @@
     }
   }
 
+  /*<---Individual Contact Info box--->*/
   &__box {
     padding-bottom: 8px;
   }
@@ -503,22 +485,25 @@
       align-self: center;
     }
   }
+
   /*<---Social Media Icon SVGs--->*/
   &__icons {
-    padding-right: 32px;
-    padding-bottom: 16px;
+    padding-right: 2rem;
+    padding-bottom: 1rem;
 
     @include tablet {
       padding: 0.5rem 0 0 1.5rem;
     }
   }
-  /*<---Person Contact Info Individual Box--->*/
+
+  /*<---Individual Boxes for Person's Contact Info--->*/
   &__contact {
     color: $white;
     list-style-type: none;
     @include body-foot;
   }
-  /*<---Link to footer emails->*/
+
+  /*<---Email Links->*/
   &__emails {
     color: $white;
     @include body-foot;
@@ -526,44 +511,46 @@
   }
   /*<---Person's Name/Company(BOLDED)--->*/
   &__person--bold {
-    padding-bottom: 16px;
-    font-weight: 600;
+    padding-bottom: 1rem;
+    font-weight: 700;
     @include body-foot;
   }
-  /*<---Person's Name/Company(BOLDED)--->*/
+
+  /*<---Person's Contact Info--->*/
   &__person {
-    padding-bottom: 16px;
+    padding-bottom: 1rem;
 
     @include tablet {
-      padding-bottom: 22px;
+      padding-bottom: 1.375rem;
     }
   }
+
   /*<---Footer Bandsite Logo--->*/
   &__logo {
     @extend .nav__logo;
-    margin-top: 16px;
+    margin-top: 1rem;
 
     @include tablet {
       position: absolute;
-      top: 52px;
-      right: 35px;
+      top: 3.25rem;
+      right: 2.1875rem;
     }
 
     @include desktop {
-      top: 48px;
-      right: 80px;
+      top: 3rem;
+      right: 5rem;
     }
   }
 
   /*<---Footer Copyrights--->*/
   &__copyright {
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     color: $white;
     @include label-btn;
 
     @include tablet {
-      padding-top: 14px;
+      padding-top: 0.875rem;
       @include body-foot;
     }
   }

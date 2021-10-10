@@ -1,8 +1,9 @@
-// @keyframes nav-hover {
-//   from {
-//     border-bottom: 2px solid $black;
-//   }
-//   to {
-//     border-bottom: 2px solid $mercury;
-//   }
-// }
+@keyframes img-hover {
+  from {
+    filter: grayscale(100%);
+  }
+
+  to {
+    filter: grayscale(0%);
+  }
+}

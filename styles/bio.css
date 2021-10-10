@@ -1,9 +1,19 @@
-/*PRIMARY COLORS*/
-/*SECONDARY COLORS*/
-/*MOBILE TXT STYLES*/
-/*CHECK IF THIS IS DEMI*---->*/
-/*TABLET & DESKTOP TXT STYLES*/
-/*TABLET & DESKTOP MIXINS*/
+@-webkit-keyframes img-hover {
+  from {
+    filter: grayscale(100%);
+  }
+  to {
+    filter: grayscale(0%);
+  }
+}
+@keyframes img-hover {
+  from {
+    filter: grayscale(100%);
+  }
+  to {
+    filter: grayscale(0%);
+  }
+}
 /*FONT STYLE*/
 @font-face {
   font-family: "avenir-reg";
@@ -17,6 +27,12 @@
   font-family: "avenir-bold";
   src: url(/assets/fonts/AvenirNextLTPro-Bold.otf);
 }
+/*PRIMARY COLORS*/
+/*SECONDARY COLORS*/
+/*MOBILE TXT STYLES*/
+/*CHECK IF THIS IS DEMI*---->*/
+/*TABLET & DESKTOP TXT STYLES*/
+/*TABLET & DESKTOP MIXINS*/
 * {
   margin: 0;
   padding: 0;
@@ -29,30 +45,30 @@
   flex-direction: column;
   background-color: #323232;
   padding-top: 16px;
-  width: 100%;
+  min-width: 320px;
   /*<---fixed navigation to TOP--->*/
-  /*<---nav LOGO--->*/
-  /*<---nav links--->*/
-  /*ITEM HOVERS*/
-  /*nav links--*/
+  /*<---Nav LOGO--->*/
+  /*<---Nav Links--->*/
+  /*<---Nav List Item Hover--->*/
+  /*<---Nav Links--->*/
 }
 @media screen and (min-width: 768px) {
   .nav {
-    padding-left: 36px;
-    padding-right: 36px;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
     flex-direction: row;
   }
 }
 @media screen and (min-width: 1280px) {
   .nav {
-    padding-left: 80px;
-    padding-right: 80px;
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 }
 .nav__logo, .footer__logo {
   margin: auto;
-  height: 20px;
-  width: 120px;
+  height: 1.25rem;
+  width: 7.5rem;
 }
 @media screen and (min-width: 768px) {
   .nav__logo, .footer__logo {
@@ -71,8 +87,8 @@
 }
 @media screen and (min-width: 768px) {
   .nav__list {
-    padding-left: 24px;
-    width: 275px;
+    padding-left: 1.5rem;
+    width: 17.1875rem;
   }
 }
 .nav__item {
@@ -96,11 +112,11 @@
 .nav__item--active {
   padding-bottom: 0.5rem;
   color: #ffffff;
-  border-bottom: 3px solid #e1e1e1;
+  border-bottom: 3px solid #ffffff;
 }
 @media screen and (min-width: 768px) {
   .nav__item--active {
-    border-bottom: 3px solid #e1e1e1;
+    border-bottom: 3px solid #ffffff;
     width: 25%;
   }
 }
@@ -109,7 +125,7 @@
     border-bottom: 3px solid #323232;
   }
   to {
-    border-bottom: 3px solid #e1e1e1;
+    border-bottom: 3px solid #ffffff;
   }
 }
 @keyframes nav-hover {
@@ -117,7 +133,7 @@
     border-bottom: 3px solid #323232;
   }
   to {
-    border-bottom: 3px solid #e1e1e1;
+    border-bottom: 3px solid #ffffff;
   }
 }
 .nav__link {
@@ -131,16 +147,15 @@
   .nav__link {
     display: flex;
     align-content: center;
-    font-weight: 700;
     font-size: 0.875rem;
     line-height: 1.375rem;
-    font-weight: 400;
     font-family: "avenir-reg";
     padding-bottom: 1.5rem;
   }
 }
-.nav__link__link--bold {
+.nav__link--bold {
   font-weight: bold;
+  color: #ffffff;
 }
 
 /*HERO SECTION*/
@@ -151,7 +166,7 @@
   background-position: center;
   margin-top: 5rem;
   height: 12rem;
-  width: 100%;
+  min-width: 320px;
   margin: auto;
   display: flex;
   position: relative;
@@ -160,17 +175,15 @@
 }
 @media screen and (min-width: 768px) {
   .hero {
-    width: 100%;
     background-position: bottom;
     height: 28rem;
-    padding-left: 36px;
-    padding-right: 36px;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .hero {
-    width: 100%;
-    background-position: center;
+    background-position: center -4rem;
     height: 37rem;
   }
 }
@@ -183,19 +196,19 @@
   bottom: 0;
   left: 0;
   right: 0;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 @media screen and (min-width: 768px) {
   .hero__overlay {
-    padding-left: 36px;
-    padding-right: 36px;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .hero__overlay {
-    padding-left: 80px;
-    padding-right: 80px;
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 }
 .hero__header {
@@ -204,13 +217,12 @@
   color: #ffffff;
   font-size: 1.5rem;
   line-height: 2rem;
-  font-family: "avenir-reg";
+  font-family: "avenir-demi";
 }
 @media screen and (min-width: 768px) {
   .hero__header {
     font-size: 3.75rem;
     line-height: 4.25rem;
-    font-weight: 700;
     font-family: "avenir-demi";
   }
 }
@@ -218,11 +230,12 @@
 /*ABOUT SECTION*/
 /*<---Main About Box--->*/
 .about {
+  margin: auto;
   padding: 24px 16px;
   display: flex;
   flex-direction: column;
+  min-width: 320px;
   width: 320px;
-  margin: auto;
   /*<---About Musicians Header--->*/
   /*<---Band Img Box--->*/
   /*<---Band Img--->*/
@@ -233,39 +246,41 @@
 @media screen and (min-width: 768px) {
   .about {
     padding: 48px 36px 36px 36px;
+    min-width: 768px;
     width: 768px;
   }
 }
 @media screen and (min-width: 1280px) {
   .about {
-    padding-left: 80px;
-    padding-right: 80px;
-    width: 1280px;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    min-width: 1280px;
+    width: 1920px;
   }
 }
 .about__header {
-  padding-bottom: 16px;
+  padding-bottom: 1rem;
   font-size: 1.5rem;
   line-height: 2rem;
   font-family: "avenir-demi";
 }
 @media screen and (min-width: 768px) {
   .about__header {
-    padding-bottom: 36px;
+    padding-bottom: 2.25rem;
     font-size: 2.25rem;
     line-height: 2.75rem;
-    font-weight: 700;
     font-family: "avenir-demi";
   }
 }
 .about__band {
   display: flex;
   flex-direction: column;
+  margin: auto;
 }
 @media screen and (min-width: 768px) {
   .about__band {
     margin: auto;
-    padding-bottom: 36px;
+    padding-bottom: 2.25rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -275,24 +290,26 @@
 }
 .about__img {
   height: 11rem;
+  width: 18.0625rem;
 }
 @media screen and (min-width: 768px) {
   .about__img {
     margin: auto;
-    padding-bottom: 36px;
+    padding-bottom: 2.25rem;
     height: 22rem;
-    width: 36rem;
+    width: 84%;
   }
 }
 @media screen and (min-width: 1280px) {
   .about__img {
     height: 37rem;
-    width: 59rem;
+    min-width: 59rem;
   }
 }
 .about__quote {
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 300px;
   font-weight: 700;
   font-size: 0.875rem;
   line-height: 1.375rem;
@@ -300,19 +317,19 @@
 }
 @media screen and (min-width: 768px) {
   .about__quote {
-    margin-left: 60px;
-    margin-right: 60px;
+    margin-left: 3.75rem;
+    margin-right: 3.75rem;
     padding-top: 0;
+    width: 610px;
     font-size: 1.5rem;
     line-height: 2rem;
-    font-weight: 600;
     font-family: "avenir-demi";
   }
 }
 @media screen and (min-width: 1280px) {
   .about__quote {
-    margin-left: 85px;
-    margin-right: 85px;
+    margin-left: 8%;
+    width: 64%;
   }
 }
 .about__quotee {
@@ -322,33 +339,30 @@
 }
 @media screen and (min-width: 768px) {
   .about__quotee {
-    margin-left: 60px;
-    font-size: 1.5rem;
-    line-height: 2rem;
-    font-weight: 600;
+    margin-left: 3.75rem;
+    font-size: 1.125rem;
+    line-height: 1.375rem;
     font-family: "avenir-demi";
   }
 }
 @media screen and (min-width: 1280px) {
   .about__quotee {
-    margin-left: 85px;
-    margin-right: 85px;
+    margin-left: 8%;
   }
 }
 .about__musician {
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   font-size: 0.8125rem;
   line-height: 1.125rem;
   font-family: "avenir-reg";
 }
 @media screen and (min-width: 768px) {
   .about__musician {
-    margin: auto;
-    padding-left: 60px;
+    margin-left: 3.75rem;
+    margin-right: 3.75rem;
     font-size: 1.5rem;
     line-height: 2rem;
-    font-weight: 600;
     font-family: "avenir-demi";
   }
 }
@@ -356,13 +370,13 @@
   .about__musician {
     padding-left: 0;
     padding-right: 0;
-    margin-left: 85px;
-    margin-right: 85px;
+    margin-left: 5.3125rem;
+    margin-right: 5.3125rem;
   }
 }
 .about__txt--first {
-  width: 283px;
-  padding-bottom: 16px;
+  width: 17.6875rem;
+  padding-bottom: 1rem;
   font-size: 0.8125rem;
   line-height: 1.125rem;
   font-family: "avenir-reg";
@@ -371,19 +385,18 @@
   .about__txt--first {
     font-size: 0.875rem;
     line-height: 1.375rem;
-    font-weight: 400;
     font-family: "avenir-reg";
     padding-bottom: 0;
-    width: 279px;
+    width: 17.4375rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .about__txt--first {
-    width: 415px;
+    width: 25.9375rem;
   }
 }
 .about__txt--second {
-  width: 279px;
+  width: 17.4375rem;
   font-size: 0.8125rem;
   line-height: 1.125rem;
   font-family: "avenir-reg";
@@ -392,59 +405,60 @@
   .about__txt--second {
     font-size: 0.875rem;
     line-height: 1.375rem;
-    font-weight: 400;
     font-family: "avenir-reg";
-    width: 279px;
+    width: 17.4375rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .about__txt--second {
-    width: 415px;
+    width: 25.9375rem;
   }
 }
 @media screen and (min-width: 768px) {
   .about__container {
+    margin: auto;
     display: flex;
     justify-content: space-between;
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 3.75rem;
+    padding-right: 3.75rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .about__container {
-    padding-left: 85px;
-    padding-right: 85px;
+    padding-left: 5.3125rem;
+    padding-right: 5.3125rem;
   }
 }
 
 /*PHOTO GALLERY SECTION*/
-/*<---Gallery Box--->*/
+/*<---Entire Gallery Box--->*/
 .gallery {
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 1rem;
+  padding-right: 1rem;
   background-color: #fafafa;
-  width: 320px;
+  width: 100%;
+  min-width: 320px;
   margin: auto;
   /*<---Photo Gallery Header--->*/
+  /*<---Gallery Photo List Container--->*/
+  /*<---Gallery Photos--->*/
 }
 @media screen and (min-width: 768px) {
   .gallery {
     display: flex;
     flex-direction: column;
     padding: 48px 36px 20px 36px;
-    width: 768px;
   }
 }
 @media screen and (min-width: 1280px) {
   .gallery {
-    padding-left: 80px;
-    padding-right: 80px;
-    width: 1280px;
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 }
 .gallery__header {
-  padding-top: 24px;
-  padding-bottom: 16px;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
   font-size: 1.5rem;
   line-height: 2rem;
   font-family: "avenir-demi";
@@ -452,10 +466,9 @@
 @media screen and (min-width: 768px) {
   .gallery__header {
     padding-top: 0;
-    padding-bottom: 36px;
+    padding-bottom: 2.25rem;
     font-size: 2.25rem;
     line-height: 2.75rem;
-    font-weight: 700;
     font-family: "avenir-demi";
   }
 }
@@ -470,7 +483,7 @@
 .gallery__item {
   display: flex;
   flex-direction: column;
-  padding-bottom: 16px;
+  padding-bottom: 1rem;
   filter: grayscale(100%);
 }
 @media screen and (min-width: 768px) {
@@ -483,14 +496,6 @@
           animation: img-hover 0.3s linear;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-}
-@-webkit-keyframes img-hover {
-  from {
-    filter: grayscale(100%);
-  }
-  to {
-    filter: grayscale(0%);
-  }
 }
 @keyframes img-hover {
   from {
@@ -509,15 +514,16 @@
   padding-left: 1rem;
   padding-right: 1rem;
   position: relative;
-  width: 100%;
+  min-width: 320px;
   margin: auto;
   /*<---Footer Header (Get in Touch)--->*/
+  /*<---Individual Contact Info box--->*/
   /*<---Social Media Box--->*/
   /*<---Social Media Icon SVGs--->*/
-  /*<---Person Contact Info Individual Box--->*/
-  /*<---Link to footer emails->*/
+  /*<---Individual Boxes for Person's Contact Info--->*/
+  /*<---Email Links->*/
   /*<---Person's Name/Company(BOLDED)--->*/
-  /*<---Person's Name/Company(BOLDED)--->*/
+  /*<---Person's Contact Info--->*/
   /*<---Footer Bandsite Logo--->*/
   /*<---Footer Copyrights--->*/
 }
@@ -527,7 +533,7 @@
   }
   .footer__container {
     display: flex;
-    padding-bottom: 20px;
+    padding-bottom: 1.25rem;
   }
   .footer__lists {
     display: flex;
@@ -546,8 +552,8 @@
   }
 }
 .footer__header {
-  padding-top: 24px;
-  padding-bottom: 16px;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
   color: #ffffff;
   font-size: 1.5rem;
   line-height: 2rem;
@@ -557,7 +563,6 @@
   .footer__header {
     font-size: 2.25rem;
     line-height: 2.75rem;
-    font-weight: 700;
     font-family: "avenir-demi";
   }
 }
@@ -574,8 +579,8 @@
   }
 }
 .footer__icons {
-  padding-right: 32px;
-  padding-bottom: 16px;
+  padding-right: 2rem;
+  padding-bottom: 1rem;
 }
 @media screen and (min-width: 768px) {
   .footer__icons {
@@ -597,39 +602,39 @@
   text-decoration: none;
 }
 .footer__person--bold {
-  padding-bottom: 16px;
-  font-weight: 600;
+  padding-bottom: 1rem;
+  font-weight: 700;
   font-size: 0.8125rem;
   line-height: 1.125rem;
   font-family: "avenir-reg";
 }
 .footer__person {
-  padding-bottom: 16px;
+  padding-bottom: 1rem;
 }
 @media screen and (min-width: 768px) {
   .footer__person {
-    padding-bottom: 22px;
+    padding-bottom: 1.375rem;
   }
 }
 .footer__logo {
-  margin-top: 16px;
+  margin-top: 1rem;
 }
 @media screen and (min-width: 768px) {
   .footer__logo {
     position: absolute;
-    top: 52px;
-    right: 35px;
+    top: 3.25rem;
+    right: 2.1875rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .footer__logo {
-    top: 48px;
-    right: 80px;
+    top: 3rem;
+    right: 5rem;
   }
 }
 .footer__copyright {
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   color: #ffffff;
   font-size: 0.625rem;
   line-height: 1.25rem;
@@ -637,7 +642,7 @@
 }
 @media screen and (min-width: 768px) {
   .footer__copyright {
-    padding-top: 14px;
+    padding-top: 0.875rem;
     font-size: 0.8125rem;
     line-height: 1.125rem;
     font-family: "avenir-reg";
