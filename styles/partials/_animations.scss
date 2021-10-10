@@ -1,3 +1,5 @@
+@use "./variables" as *;
+/*IMAGE HOVER*/
 @keyframes img-hover {
   from {
     filter: grayscale(100%);
@@ -5,5 +7,14 @@
 
   to {
     filter: grayscale(0%);
+  }
+}
+
+@keyframes nav-hover {
+  from {
+    border-bottom: 3px solid $black;
+  }
+  to {
+    border-bottom: 3px solid $white;
   }
 }

@@ -86,15 +86,6 @@
         width: 25%;
       }
     }
-
-    @keyframes nav-hover {
-      from {
-        border-bottom: 3px solid $black;
-      }
-      to {
-        border-bottom: 3px solid $white;
-      }
-    }
   }
 
   /*<---Nav Links--->*/
@@ -125,7 +116,7 @@
   background-size: cover;
   background-position: center;
   margin-top: 5rem;
-  height: 12rem;
+  height: 60vw;
   min-width: 320px;
   margin: auto;
   display: flex;
@@ -133,14 +124,14 @@
 
   @include tablet {
     background-position: bottom;
-    height: 28rem;
+    height: 58vw;
     padding-left: 2.25rem;
     padding-right: 2.25rem;
   }
 
   @include desktop {
     background-position: center -4rem;
-    height: 37rem;
+    height: 46vw;
   }
 
   /*<---Overlay Background--->*/
@@ -155,6 +146,7 @@
     right: 0;
     padding-left: 1rem;
     padding-right: 1rem;
+    // margin-top: 5rem;
 
     @include tablet {
       padding-left: 2.25rem;
@@ -189,19 +181,18 @@
   display: flex;
   flex-direction: column;
   min-width: 320px;
-  width: 320px;
 
   @include tablet {
     padding: 48px 36px 36px 36px;
     min-width: 768px;
-    width: 768px;
   }
 
   @include desktop {
+    // margin: auto;
     padding-left: 5rem;
     padding-right: 5rem;
     min-width: 1280px;
-    width: 1920px;
+    width: 80%;
   }
 
   /*<---About Musicians Header--->*/
@@ -219,33 +210,28 @@
   &__band {
     display: flex;
     flex-direction: column;
-    margin: auto;
 
     @include tablet {
-      margin: auto;
+      // margin: auto;
       padding-bottom: 2.25rem;
-    }
-
-    @include desktop {
-      margin: auto;
     }
   }
 
   /*<---Band Img--->*/
   &__img {
-    height: 11rem;
-    width: 18.0625rem;
+    height: 55vw;
 
     @include tablet {
       margin: auto;
       padding-bottom: 2.25rem;
-      height: 22rem;
+      height: 46vw;
       width: 84%;
     }
 
     @include desktop {
-      height: 37rem;
+      height: 46.25vw;
       min-width: 59rem;
+      margin: auto;
     }
   }
   /*<---Band Quote/Quotee--->*/
@@ -408,16 +394,6 @@
       animation: img-hover 0.3s linear;
       animation-fill-mode: forwards;
     }
-
-    @keyframes img-hover {
-      from {
-        filter: grayscale(100%);
-      }
-
-      to {
-        filter: grayscale(0%);
-      }
-    }
   }
 }
 
@@ -430,13 +406,10 @@
   padding-right: 1rem;
   position: relative;
   min-width: 320px;
-  // max-width: 767px;
   margin: auto;
 
   @include tablet {
     padding: 32px 36px 36px 36px;
-    // min-width: 768px;
-    // max-width: ;
 
     &__container {
       display: flex;
@@ -446,7 +419,7 @@
     &__lists {
       display: flex;
       justify-content: space-between;
-      width: 93%;
+      width: 40.4375rem;
     }
   }
 
@@ -455,7 +428,7 @@
     padding-left: 80px;
     padding-right: 80px;
     &__lists {
-      width: 58%;
+      width: 40.625rem;
     }
   }
 
