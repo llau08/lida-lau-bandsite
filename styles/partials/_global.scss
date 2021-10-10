@@ -1,3 +1,7 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+@use "./animations" as *;
+
 /*FONT STYLE*/
 @font-face {
   font-family: "avenir-reg";
