@@ -3,110 +3,110 @@
 @use "./partials/mixins" as *;
 @use "./partials/animations" as *;
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+// * {
+//   margin: 0;
+//   padding: 0;
+//   box-sizing: border-box;
+// }
 
-/*NAV BAR STYLES*/
-.nav {
-  display: flex;
-  flex-direction: column;
-  background-color: $black;
-  padding-top: 16px;
-  min-width: 320px;
-  /*<---fixed navigation to TOP--->*/
-  // position: fixed;
-  // width: 100%;
-  // top: 0;
-  // z-index: 1;
+// /*NAV BAR STYLES*/
+// .nav {
+//   display: flex;
+//   flex-direction: column;
+//   background-color: $black;
+//   padding-top: 16px;
+//   min-width: 320px;
+//   /*<---fixed navigation to TOP--->*/
+//   // position: fixed;
+//   // width: 100%;
+//   // top: 0;
+//   // z-index: 1;
 
-  @include tablet {
-    padding-left: 2.25rem;
-    padding-right: 2.25rem;
-    flex-direction: row;
-  }
+//   @include tablet {
+//     padding-left: 2.25rem;
+//     padding-right: 2.25rem;
+//     flex-direction: row;
+//   }
 
-  @include desktop {
-    padding-left: 5rem;
-    padding-right: 5rem;
-  }
+//   @include desktop {
+//     padding-left: 5rem;
+//     padding-right: 5rem;
+//   }
 
-  /*<---Nav LOGO--->*/
-  &__logo {
-    margin: auto;
-    height: 1.25rem;
-    width: 7.5rem;
+//   /*<---Nav LOGO--->*/
+//   &__logo {
+//     margin: auto;
+//     height: 1.25rem;
+//     width: 7.5rem;
 
-    @include tablet {
-      margin: 0;
-      display: flex;
-      align-self: center;
-      margin-bottom: 0.5rem;
-    }
-  }
+//     @include tablet {
+//       margin: 0;
+//       display: flex;
+//       align-self: center;
+//       margin-bottom: 0.5rem;
+//     }
+//   }
 
-  /*<---Nav Links--->*/
-  &__list {
-    display: flex;
-    justify-content: space-evenly;
-    list-style-type: none;
-    padding-top: 16px;
-    text-align: center;
+//   /*<---Nav Links--->*/
+//   &__list {
+//     display: flex;
+//     justify-content: space-evenly;
+//     list-style-type: none;
+//     padding-top: 16px;
+//     text-align: center;
 
-    @include tablet {
-      padding-left: 1.5rem;
-      width: 17.1875rem;
-    }
-  }
-  /*<---Nav List Item Hover--->*/
-  &__item {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    @include tablet {
-      display: flex;
-      justify-content: center;
-      width: 20%;
-    }
+//     @include tablet {
+//       padding-left: 1.5rem;
+//       width: 17.1875rem;
+//     }
+//   }
+//   /*<---Nav List Item Hover--->*/
+//   &__item {
+//     width: 50%;
+//     display: flex;
+//     justify-content: center;
+//     @include tablet {
+//       display: flex;
+//       justify-content: center;
+//       width: 20%;
+//     }
 
-    &:hover {
-      animation: nav-hover 0.5s;
-      animation-fill-mode: forwards;
-    }
+//     &:hover {
+//       animation: nav-hover 0.5s;
+//       animation-fill-mode: forwards;
+//     }
 
-    &--active {
-      padding-bottom: 0.5rem;
-      color: $white;
-      border-bottom: 3px solid $white;
+//     &--active {
+//       padding-bottom: 0.5rem;
+//       color: $white;
+//       border-bottom: 3px solid $white;
 
-      @include tablet {
-        border-bottom: 3px solid $white;
-        width: 25%;
-      }
-    }
-  }
+//       @include tablet {
+//         border-bottom: 3px solid $white;
+//         width: 25%;
+//       }
+//     }
+//   }
 
-  /*<---Nav Links--->*/
-  &__link {
-    color: $mercury;
-    text-decoration: none;
-    @include body-foot;
+//   /*<---Nav Links--->*/
+//   &__link {
+//     color: $mercury;
+//     text-decoration: none;
+//     @include body-foot;
 
-    @include tablet {
-      display: flex;
-      align-content: center;
-      @include td-body-foot;
-      padding-bottom: 1.5rem;
-    }
+//     @include tablet {
+//       display: flex;
+//       align-content: center;
+//       @include td-body-foot;
+//       padding-bottom: 1.5rem;
+//     }
 
-    &--bold {
-      font-weight: bold;
-      color: $white;
-    }
-  }
-}
+//     &--bold {
+//       font-weight: bold;
+//       color: $white;
+//     }
+//   }
+// }
 
 /*HERO SECTION*/
 
@@ -397,134 +397,134 @@
   }
 }
 
-/*FOOTER SECTION*/
-.footer {
-  background-color: $black;
-  display: flex;
-  flex-direction: column;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  position: relative;
-  min-width: 320px;
-  margin: auto;
+// /*FOOTER SECTION*/
+// .footer {
+//   background-color: $black;
+//   display: flex;
+//   flex-direction: column;
+//   padding-left: 1rem;
+//   padding-right: 1rem;
+//   position: relative;
+//   min-width: 320px;
+//   margin: auto;
 
-  @include tablet {
-    padding: 32px 36px 36px 36px;
+//   @include tablet {
+//     padding: 32px 36px 36px 36px;
 
-    &__container {
-      display: flex;
-      padding-bottom: 1.25rem;
-    }
+//     &__container {
+//       display: flex;
+//       padding-bottom: 1.25rem;
+//     }
 
-    &__lists {
-      display: flex;
-      justify-content: space-between;
-      width: 40.4375rem;
-    }
-  }
+//     &__lists {
+//       display: flex;
+//       justify-content: space-between;
+//       width: 40.4375rem;
+//     }
+//   }
 
-  @include desktop {
-    margin: auto;
-    padding-left: 80px;
-    padding-right: 80px;
-    &__lists {
-      width: 40.625rem;
-    }
-  }
+//   @include desktop {
+//     margin: auto;
+//     padding-left: 80px;
+//     padding-right: 80px;
+//     &__lists {
+//       width: 40.625rem;
+//     }
+//   }
 
-  /*<---Footer Header (Get in Touch)--->*/
-  &__header {
-    padding-top: 1.5rem;
-    padding-bottom: 1rem;
-    color: $white;
-    @include section-header;
+//   /*<---Footer Header (Get in Touch)--->*/
+//   &__header {
+//     padding-top: 1.5rem;
+//     padding-bottom: 1rem;
+//     color: $white;
+//     @include section-header;
 
-    @include tablet {
-      @include td-section-header;
-    }
-  }
+//     @include tablet {
+//       @include td-section-header;
+//     }
+//   }
 
-  /*<---Individual Contact Info box--->*/
-  &__box {
-    padding-bottom: 8px;
-  }
+//   /*<---Individual Contact Info box--->*/
+//   &__box {
+//     padding-bottom: 8px;
+//   }
 
-  /*<---Social Media Box--->*/
-  &__social {
-    display: flex;
-    list-style-type: none;
+//   /*<---Social Media Box--->*/
+//   &__social {
+//     display: flex;
+//     list-style-type: none;
 
-    @include tablet {
-      align-self: center;
-    }
-  }
+//     @include tablet {
+//       align-self: center;
+//     }
+//   }
 
-  /*<---Social Media Icon SVGs--->*/
-  &__icons {
-    padding-right: 2rem;
-    padding-bottom: 1rem;
+//   /*<---Social Media Icon SVGs--->*/
+//   &__icons {
+//     padding-right: 2rem;
+//     padding-bottom: 1rem;
 
-    @include tablet {
-      padding: 0.5rem 0 0 1.5rem;
-    }
-  }
+//     @include tablet {
+//       padding: 0.5rem 0 0 1.5rem;
+//     }
+//   }
 
-  /*<---Individual Boxes for Person's Contact Info--->*/
-  &__contact {
-    color: $white;
-    list-style-type: none;
-    @include body-foot;
-  }
+//   /*<---Individual Boxes for Person's Contact Info--->*/
+//   &__contact {
+//     color: $white;
+//     list-style-type: none;
+//     @include body-foot;
+//   }
 
-  /*<---Email Links->*/
-  &__emails {
-    color: $white;
-    @include body-foot;
-    text-decoration: none;
-  }
-  /*<---Person's Name/Company(BOLDED)--->*/
-  &__person--bold {
-    padding-bottom: 1rem;
-    font-weight: 700;
-    @include body-foot;
-  }
+//   /*<---Email Links->*/
+//   &__emails {
+//     color: $white;
+//     @include body-foot;
+//     text-decoration: none;
+//   }
+//   /*<---Person's Name/Company(BOLDED)--->*/
+//   &__person--bold {
+//     padding-bottom: 1rem;
+//     font-weight: 700;
+//     @include body-foot;
+//   }
 
-  /*<---Person's Contact Info--->*/
-  &__person {
-    padding-bottom: 1rem;
+//   /*<---Person's Contact Info--->*/
+//   &__person {
+//     padding-bottom: 1rem;
 
-    @include tablet {
-      padding-bottom: 1.375rem;
-    }
-  }
+//     @include tablet {
+//       padding-bottom: 1.375rem;
+//     }
+//   }
 
-  /*<---Footer Bandsite Logo--->*/
-  &__logo {
-    @extend .nav__logo;
-    margin-top: 1rem;
+//   /*<---Footer Bandsite Logo--->*/
+//   &__logo {
+//     @extend .nav__logo;
+//     margin-top: 1rem;
 
-    @include tablet {
-      position: absolute;
-      top: 3.25rem;
-      right: 2.1875rem;
-    }
+//     @include tablet {
+//       position: absolute;
+//       top: 3.25rem;
+//       right: 2.1875rem;
+//     }
 
-    @include desktop {
-      top: 3rem;
-      right: 5rem;
-    }
-  }
+//     @include desktop {
+//       top: 3rem;
+//       right: 5rem;
+//     }
+//   }
 
-  /*<---Footer Copyrights--->*/
-  &__copyright {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    color: $white;
-    @include label-btn;
+//   /*<---Footer Copyrights--->*/
+//   &__copyright {
+//     padding-top: 1rem;
+//     padding-bottom: 1rem;
+//     color: $white;
+//     @include label-btn;
 
-    @include tablet {
-      padding-top: 0.875rem;
-      @include body-foot;
-    }
-  }
-}
+//     @include tablet {
+//       padding-top: 0.875rem;
+//       @include body-foot;
+//     }
+//   }
+// }
