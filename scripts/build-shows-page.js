@@ -85,6 +85,8 @@ showsTable.appendChild(tBody);
 // tRow.appendChild(tLocation);
 // tRow.appendChild(tButton);
 
+function displayShows() {
+  
 for (let i = 0; i < tix.length; i++){
   let tRow = document.createElement('tr');
   let tDates = document.createElement('td');
@@ -103,6 +105,29 @@ for (let i = 0; i < tix.length; i++){
   tRow.appendChild(tLocation);
   tRow.appendChild(tButton);
 }
+
+}
+displayShows();
+
+
+// for (let i = 0; i < tix.length; i++){
+//   let tRow = document.createElement('tr');
+//   let tDates = document.createElement('td');
+//   tDates.innerText = tix[i].date;
+//   let tVenue = document.createElement('td');
+//   tVenue.innerText = tix[i].venue;
+//   let tLocation = document.createElement('td');
+//   tLocation.innerText = tix[i].location;
+//   let tButton = document.createElement('button');
+//   tButton.innerText = 'BUY TICKETS';
+//   tButton.setAttribute("onclick", "location.href='./shows.html';")
+
+//   tBody.appendChild(tRow);
+//   tRow.appendChild(tDates);
+//   tRow.appendChild(tVenue);
+//   tRow.appendChild(tLocation);
+//   tRow.appendChild(tButton);
+// }
 
 
 

@@ -1,51 +1,4 @@
-const joinConvo = document.querySelector('.convo');
-const convoForm = document.querySelector('.convo__form');
-const topConvoBox = document.createElement('div');
-topConvoBox.classList.add('convo__box');
-topConvoBox.classList.add('convo__box--top');
-convoForm.appendChild(topConvoBox);
-
-//BIG BOX//
-const botConvoBox = document.createElement('article');
-botConvoBox.classList.add('convo__box');
-botConvoBox.classList.add('convo__box--bot');
-convoForm.appendChild(botConvoBox);
-
-//COMMENT BOX//
-const commentBox = document.createElement('div');
-commentBox.classList.add('convo__sub-box');
-botConvoBox.appendChild(commentBox);
-
-//COMMENT TWEET BOX//
-const tweetBox = document.createElement('div');
-tweetBox.classList.add('convo__tweet');
-commentBox.appendChild(tweetBox);
-
-const nameDate = document.createElement('div');
-nameDate.classList.add('convo__sub-info');
-tweetBox.appendChild(nameDate);
-
-//IMG BOX//
-const botConvoImg = document.createElement('div');
-botConvoImg.classList.add('convo__avatar');
-commentBox.appendChild(botConvoImg);
-
-
-//STUFF IN THE JOIN CONVERSATION SECTION//
-let convoTitle = document.createElement('h2');
-joinConvo.prepend(convoTitle);
-convoTitle.innerText = 'Join the Conversation';
-
-let convoImg = document.createElement('img');
-convoImg.setAttribute("src","../assets/images/Mohan-muruge.jpg")
-convoImg.alt = "avatar"
-convoForm.prepend(convoImg);
-
-let convoButton = document.createElement('button');
-convoButton.setAttribute("onclick", "location.href='../styles/shows.html';")
-convoButton.innerText = "COMMENT";
-convoForm.appendChild(convoButton);
-
+const commentBox = document.querySelector('.convo__comments');
 
 let comments = [{
     name: 'Connor Walton',
@@ -61,7 +14,44 @@ let comments = [{
     name: 'Miles Acosta',
     date: '12/20/2021',
     note: 'I can t stop listening. Every time I hear one of their songs the vocals it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can t get enough.'
-}]
+}];
+
+function displayComment(comm){
+const singleComm = document.createElement('article');
+commentBox.appendChild(singleComm);
+
+//IMAGE//
+const commImg = document.createElement('div');
+commImg.classList.add('convo__img');
+singleComm.appendChild(commImg);
+
+//NAME & DATE BOX//
+const commHead = document.createElement('div');
+commHead.classList.add('convo__indv-head');
+singleComm.appendChild(commHead);
+
+////INNER COMMENT TXT//
+const commTxt = document.createElement('div');
+commTxt.classList.add('convo__txt');
+singleComm.appendChild(commTxt);
+
+//INNER COMMENT P TAGS//
+const pName = document.createElement('p');
+commHead.appendChild(pName);
+pName.innerText = comm.name;
+
+const pDate = document.createElement('p');
+commHead.appendChild(pDate);
+pDate.innerText = comm.date;
+
+const pTxt = document.createElement('p');
+commTxt.appendChild(pTxt);
+pTxt.innerText = comm.note;
+}
+
+for (let i=0; i < comments.length; i++){
+    displayComment(comments[i]);
+};
 
 
-for (let i=0; i < comments.length; i++);
+
