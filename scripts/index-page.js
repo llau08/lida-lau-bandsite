@@ -6,7 +6,7 @@ topConvoBox.classList.add('convo__box--top');
 convoForm.appendChild(topConvoBox);
 
 //BIG BOX//
-const botConvoBox = document.createElement('div');
+const botConvoBox = document.createElement('article');
 botConvoBox.classList.add('convo__box');
 botConvoBox.classList.add('convo__box--bot');
 convoForm.appendChild(botConvoBox);
@@ -43,7 +43,7 @@ convoForm.prepend(convoImg);
 
 let convoButton = document.createElement('button');
 convoButton.setAttribute("onclick", "location.href='../styles/shows.html';")
-convoButton.innerText = "Button";
+convoButton.innerText = "COMMENT";
 convoForm.appendChild(convoButton);
 
 
@@ -63,3 +63,5 @@ let comments = [{
     note: 'I can t stop listening. Every time I hear one of their songs the vocals it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can t get enough.'
 }]
 
+
+for (let i=0; i < comments.length; i++);
