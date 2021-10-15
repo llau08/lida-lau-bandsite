@@ -57,8 +57,25 @@ for (let i=0; i < comments.length; i++){
 const form = document.querySelector('.convo__form');
 form.addEventListener('submit', function (event) {
     event.preventDefault();
+    let today = new Date();
+    let numMonth = today.getMonth() + 1;
+    let numDay = today.getDate();
+    let numYear = today.getFullYear();
+
+    if (numMonth <= 9) {
+        numMonth = '0' + numMonth;
+    };
+
+    if (numDay <= 9) {
+        numDay = "0" + numDay;
+    }
+
+    today = numMonth + "/" + numDay + "/" + numYear; 
+
+
     const newComm = {
         name: event.target.name.value,
+        date: today,
         note: event.target.comment.value
     };
     comments.unshift(newComm);
