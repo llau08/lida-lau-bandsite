@@ -12,7 +12,7 @@ let comments = [{
 },
 {
     name: 'Miles Acosta',
-    date: '12/20/2021',
+    date: '12/20/2020',
     note: 'I can t stop listening. Every time I hear one of their songs the vocals it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can t get enough.'
 }];
 
@@ -52,6 +52,22 @@ pTxt.innerText = comm.note;
 for (let i=0; i < comments.length; i++){
     displayComment(comments[i]);
 };
+
+
+const form = document.querySelector('.convo__form');
+form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    const newComm = {
+        name: event.target.name.value,
+        note: event.target.comment.value
+    };
+    comments.unshift(newComm);
+    commentBox.innerHTML = "";
+
+    for (let i=0; i < comments.length; i++){
+        displayComment(comments[i]);}
+    form.reset();
+})
 
 
 

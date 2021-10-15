@@ -85,8 +85,6 @@ showsTable.appendChild(tBody);
 // tRow.appendChild(tLocation);
 // tRow.appendChild(tButton);
 
-function displayShows() {
-  
 for (let i = 0; i < tix.length; i++){
   let tRow = document.createElement('tr');
   let tDates = document.createElement('td');
@@ -106,8 +104,7 @@ for (let i = 0; i < tix.length; i++){
   tRow.appendChild(tButton);
 }
 
-}
-displayShows();
+
 
 
 // for (let i = 0; i < tix.length; i++){
