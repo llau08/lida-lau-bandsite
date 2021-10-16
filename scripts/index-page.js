@@ -1,4 +1,6 @@
 const commentBox = document.querySelector('.convo__comments');
+const commentTextBox = document.getElementById('comment');
+const commentNameBox = document.getElementById('name');
 
 let comments = [{
     name: 'Connor Walton',
@@ -18,33 +20,47 @@ let comments = [{
 
 function displayComment(comm){
 const singleComm = document.createElement('article');
+singleComm.classList.add('convo__indv-box');
 commentBox.appendChild(singleComm);
 
-//IMAGE//
+// //IMAGE BOX//
 const commImg = document.createElement('div');
-commImg.classList.add('convo__img');
+commImg.classList.add('convo__img-box');
 singleComm.appendChild(commImg);
+
+//ADD IMAGE TO IMG BOX//
+const avatar = document.createElement('img');
+avatar.classList.add('convo__avatar');
+commImg.appendChild(avatar);
+
+//THAT BOX THAT HOLDS THE NAME/DATE/TEXT TOGETHER//
+const innerCommBox = document.createElement('div');
+innerCommBox.classList.add('convo__sub-box')
+singleComm.appendChild(innerCommBox);
 
 //NAME & DATE BOX//
 const commHead = document.createElement('div');
 commHead.classList.add('convo__indv-head');
-singleComm.appendChild(commHead);
+innerCommBox.appendChild(commHead);
 
 ////INNER COMMENT TXT//
 const commTxt = document.createElement('div');
 commTxt.classList.add('convo__txt');
-singleComm.appendChild(commTxt);
+innerCommBox.appendChild(commTxt);
 
 //INNER COMMENT P TAGS//
 const pName = document.createElement('p');
+pName.classList.add('convo__comm-name')
 commHead.appendChild(pName);
 pName.innerText = comm.name;
 
 const pDate = document.createElement('p');
+pDate.classList.add('convo__comm-date')
 commHead.appendChild(pDate);
 pDate.innerText = comm.date;
 
 const pTxt = document.createElement('p');
+pTxt.classList.add('convo__comm-txt')
 commTxt.appendChild(pTxt);
 pTxt.innerText = comm.note;
 }
@@ -86,5 +102,7 @@ form.addEventListener('submit', function (event) {
     form.reset();
 })
 
-
-
+//Click on the box and get rid of value//
+commentTextBox.addEventListener("click", () => {
+    commentTextBox.innerText = "";
+})

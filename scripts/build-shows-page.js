@@ -54,11 +54,11 @@ showsTable.appendChild(tHead);
 
 let thRow = document.createElement('tr');
 let heading1 = document.createElement('th');
-heading1.innerText = 'Date';
+heading1.innerText = 'DATE';
 let heading2 = document.createElement('th');
-heading2.innerText = 'Venue';
+heading2.innerText = 'VENUE';
 let heading3 = document.createElement('th');
-heading3.innerText = 'Location';
+heading3.innerText = 'LOCATION';
 
 tHead.appendChild(thRow);
 thRow.appendChild(heading1);
@@ -69,25 +69,26 @@ thRow.appendChild(heading3);
 let tBody = document.createElement('tbody');
 showsTable.appendChild(tBody);
 
-for (let i = 0; i < tix.length; i++){
-  let tRow = document.createElement('tr');
-  tRow.classList.add('shows__row');
-  let tDates = document.createElement('td');
-  tDates.innerText = tix[i].date;
-  let tVenue = document.createElement('td');
-  tVenue.innerText = tix[i].venue;
-  let tLocation = document.createElement('td');
-  tLocation.innerText = tix[i].location;
-  let tButton = document.createElement('button');
-  tButton.innerText = 'BUY TICKETS';
-  tButton.setAttribute("onclick", "location.href='./shows.html';")
+  for (let i = 0; i < tix.length; i++) {
+    let tRow = document.createElement('tr');
+    tRow.classList.add('shows__row');
+    let tDates = document.createElement('td');
+    tDates.innerText = tix[i].date;
+    let tVenue = document.createElement('td');
+    tVenue.innerText = tix[i].venue;
+    let tLocation = document.createElement('td');
+    tLocation.innerText = tix[i].location;
+    let tButton = document.createElement('button');
+    tButton.innerText = 'BUY TICKETS';
+    tButton.setAttribute("onclick", "location.href='./shows.html';")
 
-  tBody.appendChild(tRow);
-  tRow.appendChild(tDates);
-  tRow.appendChild(tVenue);
-  tRow.appendChild(tLocation);
-  tRow.appendChild(tButton);
-};
+    tBody.appendChild(tRow);
+    tRow.appendChild(tDates);
+    tRow.appendChild(tVenue);
+    tRow.appendChild(tLocation);
+    tRow.appendChild(tButton);
+  }
+
 
 
 const completeTR = document.querySelectorAll('.shows__row');

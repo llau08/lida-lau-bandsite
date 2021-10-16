@@ -77,3 +77,15 @@
     @content;
   }
 }
+
+@mixin button {
+  background-color: $black;
+  cursor: pointer;
+  color: $white;
+  height: 2.5rem;
+  border-radius: 0.25rem;
+  font-family: "avenir-reg";
+  &:hover {
+    background-color: $darkblack;
+  }
+}

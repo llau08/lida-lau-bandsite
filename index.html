@@ -87,14 +87,17 @@
         </section>
 
         <section class="convo">
-            <h2>Join the Conversation</h2>
-            <form class="convo__form">
-                <label for ="name">NAME</label>
-                <input type = "text" id="name" name="name">
-                <label for ="comment">COMMENT</label>
-                <textarea id="comment" name="comment"></textarea>
-                <button type="submit">COMMENT</button>
-            </form>
+            <h2 class="convo__title">Join the Conversation</h2>
+            <div>
+                <form class="convo__form">
+                    <label for ="name">NAME</label>
+                    <input type = "text" id="name" name="name" class = "convo__name-field" placeholder="Enter your name">
+                    <label for ="comment">COMMENT</label>
+                    <textarea id="comment" name="comment" class="convo__txt-field" placeholder="Add a new comment"></textarea>
+                    <button type="submit" class="convo__btn">COMMENT</button>
+                    <hr>
+                </form>
+            </div>
             <div class="convo__comments"></div>
         </section>
     </main>

@@ -631,4 +631,95 @@
           animation: img-hover 0.3s linear;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+}
+
+.convo {
+  padding: 24px 16px 16px 16px;
+  width: 320px;
+}
+
+.convo__form {
+  padding: 24px 16px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.convo__name-field,
+.convo__txt-field {
+  margin-bottom: 16px;
+}
+
+.convo__title {
+  font-family: "avenir-bold";
+  color: #323232;
+}
+
+label {
+  font-family: "avenir-demi";
+  color: #afafaf;
+}
+
+.convo__btn {
+  background-color: #323232;
+  cursor: pointer;
+  color: #ffffff;
+  height: 2.5rem;
+  border-radius: 0.25rem;
+  font-family: "avenir-reg";
+}
+.convo__btn:hover {
+  background-color: #000000;
+}
+
+.convo__comments {
+  display: flex;
+  flex-direction: column;
+}
+
+.convo__indv-box {
+  display: flex;
+  flex-direction: row;
+  height: 140px;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.convo__sub-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.convo__avatar {
+  background-color: #e1e1e1;
+  border-radius: 50px;
+  width: 42px;
+  height: 40px;
+  margin-top: 8px;
+  margin-right: 10px;
+}
+
+.convo__indv-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-family: "avenir-reg";
+}
+
+.convo__txt {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-family: "avenir-reg";
+}
+
+.convo__comm-name {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-family: "avenir-demi", "sans-serif";
+}
+
+.convo__comm-date {
+  color: #afafaf;
 }/*# sourceMappingURL=bio.css.map */
