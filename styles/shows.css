@@ -378,14 +378,66 @@
   z-index: 1;
 }
 
+.shows {
+  padding: 24px 16px 16px 16px;
+  width: 320px;
+}
+@media screen and (min-width: 768px) {
+  .shows {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows {
+    width: 1280px;
+  }
+}
+
+.shows__table {
+  width: 100%;
+}
+
 th {
   font-size: 0.625rem;
   line-height: 1.25rem;
   font-family: "avenir-bold";
   color: #afafaf;
 }
+@media screen and (min-width: 768px) {
+  th {
+    display: block;
+  }
+}
 
 tr {
   display: flex;
   flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  tr {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 36px;
+    border-bottom: 1px solid #e1e1e1;
+  }
+}
+
+.shows__btn {
+  width: 100%;
+  background-color: #323232;
+  cursor: pointer;
+  color: #ffffff;
+  height: 2.5rem;
+  border-radius: 0.25rem;
+  font-family: "avenir-reg";
+  border-style: unset;
+}
+.shows__btn:hover {
+  background-color: #000000;
+}
+@media screen and (min-width: 768px) {
+  .shows__btn {
+    width: 150px;
+  }
 }/*# sourceMappingURL=shows.css.map */

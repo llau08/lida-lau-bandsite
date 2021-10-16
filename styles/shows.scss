@@ -94,12 +94,51 @@
 // }
 
 //SHOW SECTION//
+.shows {
+  padding: 24px 16px 16px 16px;
+  width: 320px;
+
+  @include tablet {
+    width: 768px;
+  }
+
+  @include desktop {
+    width: 1280px;
+  }
+}
+
+.shows__table {
+  width: 100%;
+}
+
 th {
   @include label-btn;
   color: $silver;
+
+  @include tablet {
+    display: block;
+  }
 }
 
 tr {
   display: flex;
   flex-direction: column;
+
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 36px;
+    border-bottom: 1px solid $mercury;
+  }
+}
+
+//BUTTONS//
+.shows__btn {
+  width: 100%;
+  @include button;
+
+  @include tablet {
+    width: 150px;
+  }
 }

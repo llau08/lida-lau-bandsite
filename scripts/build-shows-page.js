@@ -46,6 +46,7 @@ showContainer.appendChild(showTitle);
 
 //TABLE FOR SHOWS//
   const showsTable = document.createElement('table');
+  showsTable.classList.add('shows__table')
   showContainer.appendChild(showsTable);
 
 // TABLE HEADER //
@@ -79,6 +80,7 @@ showsTable.appendChild(tBody);
     let tLocation = document.createElement('td');
     tLocation.innerText = tix[i].location;
     let tButton = document.createElement('button');
+    tButton.classList.add('shows__btn')
     tButton.innerText = 'BUY TICKETS';
     tButton.setAttribute("onclick", "location.href='./shows.html';")
 
