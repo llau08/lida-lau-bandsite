@@ -151,6 +151,12 @@ th {
   }
 }
 
+.shows__hrow {
+  @extend .shows__row;
+  border-bottom: none;
+  justify-content: space-between;
+}
+
 //BUTTONS//
 .shows__btn {
   width: 100%;

@@ -448,18 +448,23 @@ th {
   }
 }
 
-.shows__row {
+.shows__row, .shows__hrow {
   display: flex;
   flex-direction: column;
 }
 @media screen and (min-width: 768px) {
-  .shows__row {
+  .shows__row, .shows__hrow {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     padding-top: 36px;
     border-bottom: 1px solid #e1e1e1;
   }
+}
+
+.shows__hrow {
+  border-bottom: none;
+  justify-content: space-between;
 }
 
 .shows__btn {

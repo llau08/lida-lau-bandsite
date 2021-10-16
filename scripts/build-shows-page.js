@@ -54,6 +54,7 @@ let tHead = document.createElement('thead');
 showsTable.appendChild(tHead);
 
 let thRow = document.createElement('tr');
+thRow.classList.add('shows__hrow');
 let heading1 = document.createElement('th');
 heading1.innerText = 'DATE';
 let heading2 = document.createElement('th');
