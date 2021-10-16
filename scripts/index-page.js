@@ -29,7 +29,7 @@ commImg.classList.add('convo__img-box');
 singleComm.appendChild(commImg);
 
 //ADD IMAGE TO IMG BOX//
-const avatar = document.createElement('img');
+const avatar = document.createElement('div');
 avatar.classList.add('convo__avatar');
 commImg.appendChild(avatar);
 

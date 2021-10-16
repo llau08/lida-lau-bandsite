@@ -650,9 +650,10 @@
 }
 
 .convo__form {
-  padding: 12px;
+  padding-top: 12px;
+  padding-bottom: 12px;
   display: flex;
-  width: 100%;
+  flex-grow: 1;
   flex-direction: column;
 }
 
@@ -676,6 +677,8 @@
 .convo__avatar--background {
   background-image: url(../assets/images/Mohan-muruge.jpg);
   background-size: cover;
+  width: 36px;
+  height: 36px;
 }
 @media screen and (min-width: 768px) {
   .convo__avatar--background {
@@ -694,15 +697,7 @@
   background-color: #fafafa;
   border-style: solid;
   outline-color: #323232;
-}
-#name ::-moz-placeholder {
-  color: #323232;
-}
-#name :-ms-input-placeholder {
-  color: #323232;
-}
-#name ::placeholder {
-  color: #323232;
+  padding: 10px;
 }
 
 #comment {
@@ -715,6 +710,8 @@
   border-style: solid;
   outline-color: #323232;
   resize: none;
+  padding: 10px;
+  font-family: "avenir-reg";
 }
 
 .convo__lbl {

@@ -60,11 +60,14 @@ let heading2 = document.createElement('th');
 heading2.innerText = 'VENUE';
 let heading3 = document.createElement('th');
 heading3.innerText = 'LOCATION';
+let heading4 = document.createElement('th');
+
 
 tHead.appendChild(thRow);
 thRow.appendChild(heading1);
 thRow.appendChild(heading2);
 thRow.appendChild(heading3);
+thRow.appendChild(heading4);
 
 // TABLE BODY //
 let tBody = document.createElement('tbody');
@@ -74,11 +77,14 @@ showsTable.appendChild(tBody);
     let tRow = document.createElement('tr');
     tRow.classList.add('shows__row');
     let tDates = document.createElement('td');
+    tDates.classList.add('shows__dates');
     tDates.innerText = tix[i].date;
     let tVenue = document.createElement('td');
     tVenue.innerText = tix[i].venue;
+    tVenue.classList.add('shows__venues');
     let tLocation = document.createElement('td');
     tLocation.innerText = tix[i].location;
+    tLocation.classList.add('shows__locations');
     let tButton = document.createElement('button');
     tButton.classList.add('shows__btn')
     tButton.innerText = 'BUY TICKETS';

@@ -378,6 +378,10 @@
   z-index: 1;
 }
 
+.hero__song {
+  height: 30%;
+}
+
 .shows {
   padding: 24px 16px 16px 16px;
   width: 320px;
@@ -397,7 +401,42 @@
   width: 100%;
 }
 
+.shows__dates,
+.shows__venues,
+.shows__locations {
+  display: flex;
+  flex-direction: column;
+}
+
+.shows__dates:before {
+  content: "DATE";
+}
+@media screen and (min-width: 768px) {
+  .shows__dates:before {
+    display: none;
+  }
+}
+
+.shows__venues:before {
+  content: "VENUE";
+}
+@media screen and (min-width: 768px) {
+  .shows__venues:before {
+    display: none;
+  }
+}
+
+.shows__locations:before {
+  content: "LOCATION";
+}
+@media screen and (min-width: 768px) {
+  .shows__locations:before {
+    display: none;
+  }
+}
+
 th {
+  display: none;
   font-size: 0.625rem;
   line-height: 1.25rem;
   font-family: "avenir-bold";
@@ -405,16 +444,16 @@ th {
 }
 @media screen and (min-width: 768px) {
   th {
-    display: block;
+    display: table-cell;
   }
 }
 
-tr {
+.shows__row {
   display: flex;
   flex-direction: column;
 }
 @media screen and (min-width: 768px) {
-  tr {
+  .shows__row {
     display: flex;
     flex-direction: row;
     justify-content: space-around;

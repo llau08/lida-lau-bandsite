@@ -76,22 +76,9 @@
   z-index: 1;
 }
 
-// .hero__song {
-//   font-size: 10px;
-//   color: #cccccc;
-//   line-break: anywhere;
-//   word-break: normal;
-//   overflow: hidden;
-//   white-space: nowrap;
-//   text-overflow: ellipsis;
-//   font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
-//     Garuda, Verdana, Tahoma, sans-serif;
-//   font-weight: 100;
-//   padding-top: 1rem;
-//   display: flex;
-//   justify-content: flex-end;
-//   // z-index: 1;
-// }
+.hero__song {
+  height: 30%;
+}
 
 //SHOW SECTION//
 .shows {
@@ -111,16 +98,47 @@
   width: 100%;
 }
 
+.shows__dates,
+.shows__venues,
+.shows__locations {
+  display: flex;
+  flex-direction: column;
+}
+
+.shows__dates:before {
+  content: "DATE";
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.shows__venues:before {
+  content: "VENUE";
+  @include tablet {
+    display: none;
+  }
+}
+
+.shows__locations:before {
+  content: "LOCATION";
+  @include tablet {
+    display: none;
+  }
+}
+
 th {
+  display: none;
+
   @include label-btn;
   color: $silver;
 
   @include tablet {
-    display: block;
+    display: table-cell;
   }
 }
 
-tr {
+.shows__row {
   display: flex;
   flex-direction: column;
 

@@ -309,9 +309,10 @@
 }
 
 .convo__form {
-  padding: 12px;
+  padding-top: 12px;
+  padding-bottom: 12px;
   display: flex;
-  width: 100%;
+  flex-grow: 1;
   flex-direction: column;
 }
 
@@ -333,6 +334,8 @@
 .convo__avatar--background {
   background-image: url(../assets/images/Mohan-muruge.jpg);
   background-size: cover;
+  width: 36px;
+  height: 36px;
 
   @include tablet {
     width: 48px;
@@ -350,10 +353,7 @@
   background-color: $alabaster;
   border-style: solid;
   outline-color: $black;
-
-  ::placeholder {
-    color: $black;
-  }
+  padding: 10px;
 }
 
 #comment {
@@ -366,6 +366,8 @@
   border-style: solid;
   outline-color: $black;
   resize: none;
+  padding: 10px;
+  font-family: "avenir-reg";
 }
 
 .convo__lbl {
