@@ -292,43 +292,124 @@
   }
 }
 
-//COMMENT SECTION//
+//COMMENT FORM SECTION//
 
 .convo {
   padding: 24px 16px 16px 16px;
   width: 320px;
+
+  @include tablet {
+    padding: 48px 36px 20px 36px;
+    width: 768px;
+  }
+
+  @include desktop {
+    margin: auto;
+  }
 }
 
 .convo__form {
-  padding: 24px 16px 16px 16px;
+  padding: 12px;
   display: flex;
+  width: 100%;
   flex-direction: column;
-  border-bottom: 1px solid $mercury;
 }
 
-.convo__name-field,
-.convo__txt-field {
+.convo__form-submit {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid $mercury;
+
+  @include tablet {
+    width: 84%;
+    margin: auto;
+  }
+
+  @include desktop {
+    width: 59rem;
+  }
+}
+
+.convo__avatar--background {
+  background-image: url(../assets/images/Mohan-muruge.jpg);
+  background-size: cover;
+
+  @include tablet {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+#name {
+  margin-top: 4px;
   margin-bottom: 16px;
+  height: 36px;
+  border-radius: 4px;
+  background-color: $alabaster;
+  border-color: $mercury;
+  background-color: $alabaster;
+  border-style: solid;
+  outline-color: $black;
+
+  ::placeholder {
+    color: $black;
+  }
+}
+
+#comment {
+  margin-top: 4px;
+  margin-bottom: 16px;
+  height: 100px;
+  border-radius: 4px;
+  background-color: $alabaster;
+  border-color: $mercury;
+  border-style: solid;
+  outline-color: $black;
+  resize: none;
+}
+
+.convo__lbl {
+  font-family: "avenir-reg";
+  color: $silver;
+  font-size: 10px;
 }
 
 .convo__title {
-  font-family: "avenir-bold";
+  @include section-header;
   color: $black;
-}
 
-label {
-  font-family: "avenir-demi";
-  color: $silver;
+  @include tablet {
+    @include td-section-header;
+  }
+
+  @include desktop {
+    @include td-section-header;
+  }
 }
 
 .convo__btn {
   @include button;
+
+  @include tablet {
+    width: 150px;
+    position: relative;
+    left: 70.4%;
+  }
 }
 
 //JS CLASSES FOR COMMENTS//
 .convo__comments {
   display: flex;
   flex-direction: column;
+
+  @include tablet {
+    width: 84%;
+    margin: auto;
+  }
+
+  @include desktop {
+    width: 59rem;
+  }
 }
 
 .convo__indv-box {
@@ -336,21 +417,34 @@ label {
   flex-direction: row;
   height: 140px;
   border-bottom: 1px solid $mercury;
+  overflow-block: hidden;
+
+  @include tablet {
+    height: 100px;
+  }
 }
 
 .convo__sub-box {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  margin-top: 12px;
 }
 
 .convo__avatar {
   background-color: $mercury;
-  border-radius: 50px;
-  width: 42px;
-  height: 40px;
-  margin-top: 8px;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  margin-top: 15px;
   margin-right: 10px;
+
+  @include tablet {
+    width: 48px;
+    height: 48px;
+  }
 }
 
 .convo__indv-head {
@@ -362,6 +456,9 @@ label {
 
 .convo__txt {
   @include body-foot;
+  display: flex;
+  flex-grow: 1;
+  margin-top: 5px;
 }
 
 //NAMES OF COMMENTS//
