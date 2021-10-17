@@ -31,11 +31,6 @@
   background-color: $black;
   padding-top: 16px;
   min-width: 320px;
-  /*<---fixed navigation to TOP--->*/
-  // position: fixed;
-  // width: 100%;
-  // top: 0;
-  // z-index: 1;
 
   @include tablet {
     padding-left: 2.25rem;

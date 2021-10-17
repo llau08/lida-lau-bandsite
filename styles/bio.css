@@ -63,7 +63,6 @@
   background-color: #323232;
   padding-top: 16px;
   min-width: 320px;
-  /*<---fixed navigation to TOP--->*/
   /*<---Nav LOGO--->*/
   /*<---Nav Links--->*/
   /*<---Nav List Item Hover--->*/
@@ -310,7 +309,7 @@
   background-position: center;
   margin-top: 5rem;
   height: 60vw;
-  min-width: 320px;
+  min-width: 20rem;
   margin: auto;
   display: flex;
   position: relative;
@@ -801,6 +800,7 @@
   font-family: "avenir-reg", "sans-serif";
   display: flex;
   margin-top: 0.3125rem;
+  word-break: break-word;
 }
 @media screen and (min-width: 768px) {
   .convo__txt {
@@ -820,9 +820,21 @@
   font-family: "avenir-demi", "sans-serif";
   overflow: hidden;
   width: 59%;
+  max-height: 1.375rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .convo__comm-date {
   color: #afafaf;
+}
+.convo__comm-txt {
+  max-height: 5.625rem;
+  overflow: auto;
+}
+@media screen and (min-width: 768px) {
+  .convo__comm-txt {
+    max-height: 4.125rem;
+  }
 }
 
 #name {

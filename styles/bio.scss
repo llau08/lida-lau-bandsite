@@ -12,7 +12,7 @@
   background-position: center;
   margin-top: 5rem;
   height: 60vw;
-  min-width: 320px;
+  min-width: 20rem;
   margin: auto;
   display: flex;
   position: relative;
@@ -449,6 +449,7 @@
     @include body-foot;
     display: flex;
     margin-top: 0.3125rem;
+    word-break: break-word;
 
     @include tablet {
       @include td-body-foot;
@@ -464,11 +465,24 @@
     @include sub-header;
     overflow: hidden;
     width: 59%;
+
+    max-height: 1.375rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   //DATES OF COMMENTS//
   &__comm-date {
     color: $silver;
+  }
+
+  &__comm-txt {
+    max-height: 5.625rem;
+    overflow: auto;
+
+    @include tablet {
+      max-height: 4.125rem;
+    }
   }
 }
 
