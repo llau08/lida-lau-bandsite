@@ -809,6 +809,11 @@
     font-family: "avenir-reg", "sans-serif";
   }
 }
+@media screen and (min-width: 1280px) {
+  .convo__txt {
+    width: 32.5rem;
+  }
+}
 .convo__comm-name {
   font-size: 0.875rem;
   line-height: 1.375rem;

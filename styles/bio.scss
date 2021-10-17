@@ -453,6 +453,10 @@
     @include tablet {
       @include td-body-foot;
     }
+
+    @include desktop {
+      width: 32.5rem;
+    }
   }
 
   //NAMES OF COMMENTS//

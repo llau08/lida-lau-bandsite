@@ -104,9 +104,6 @@ const completeTR = document.querySelectorAll('.shows__row');
 
 for (let i = 0; i < completeTR.length; i++) {
   completeTR[i].addEventListener("click", (event) => {
-    // for (let j = 0; j < completeTR[i].cells.length; j++){
-    //   completeTR[i].cells[j].classList.toggle('selected')
-    // }
     completeTR[i].classList.toggle('selected')
   })
 }
