@@ -305,203 +305,212 @@
 
   @include desktop {
     margin: auto;
-    width: 1280px;
-  }
-}
-
-.convo__form {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  display: flex;
-  flex-grow: 1;
-  flex-direction: column;
-}
-
-.convo__form-submit {
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid $mercury;
-
-  @include tablet {
-    width: 84%;
-    margin: auto;
+    width: 80rem;
   }
 
-  @include desktop {
-    width: 52%;
+  //FORM ON IT'S OWN//
+  &__form {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+  }
+
+  //ENTIRE FORM BOX W/ AVATAR//
+  &__form-submit {
+    display: flex;
+    justify-content: space-between;
     border-bottom: 1px solid $mercury;
+
+    @include tablet {
+      width: 84%;
+      margin: auto;
+    }
+
+    @include desktop {
+      width: 52%;
+      border-bottom: 1px solid $mercury;
+    }
+  }
+
+  //FORM LABELS//
+  &__lbl {
+    @include td-body-foot;
+    color: $silver;
+  }
+
+  //JOIN CONVERSATION TITLE//
+  &__title {
+    @include section-header;
+    padding-bottom: 1rem;
+    color: $black;
+
+    @include tablet {
+      @include td-section-header;
+      padding-bottom: 2.25rem;
+    }
+
+    @include desktop {
+      @include td-section-header;
+      margin-left: 3%;
+    }
+  }
+
+  //COMMENT BUTTON//
+  &__btn {
+    @include button;
+
+    @include tablet {
+      width: 9.375rem;
+      position: relative;
+      left: 71.5%;
+      margin-bottom: 0.25rem;
+    }
+  }
+
+  //JS CLASSES FOR COMMENTS//
+  &__comments {
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+      width: 84%;
+      margin: auto;
+    }
+
+    @include desktop {
+      width: 39.26rem;
+    }
+  }
+
+  &__indv-box {
+    display: flex;
+    flex-direction: row;
+    height: 8.75rem;
+    border-bottom: 1px solid $mercury;
+
+    @include tablet {
+      height: 7.5rem;
+    }
+
+    @include desktop {
+      margin-right: 0.6875rem;
+    }
+  }
+
+  &__sub-box {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-top: 0.75rem;
+    width: 80%;
+  }
+
+  //AVATAR W/ BACKGROUND COLOR//
+  &__avatar {
+    background-color: $mercury;
+    border-radius: 50%;
+    width: 2.25rem;
+    height: 2.25rem;
+    margin-top: 0.9375rem;
+    margin-right: 0.625rem;
+
+    @include tablet {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+
+  //AVATAR W/ IMAGE//
+  &__avatar--background {
+    background-image: url(../assets/images/Mohan-muruge.jpg);
+    background-size: cover;
+    width: 2.25rem;
+    height: 2.25rem;
+    margin-top: 1.6875rem;
+
+    @include tablet {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+
+  //COMMENTS NAME & DATE//
+  &__indv-head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    @include body-foot;
+  }
+
+  //COMMENTS TEXTS//
+  &__txt {
+    @include body-foot;
+    display: flex;
+    margin-top: 0.3125rem;
+
+    @include tablet {
+      @include td-body-foot;
+    }
+  }
+
+  //NAMES OF COMMENTS//
+  &__comm-name {
+    @include sub-header;
+    overflow: hidden;
+    width: 59%;
+  }
+
+  //DATES OF COMMENTS//
+  &__comm-date {
+    color: $silver;
   }
 }
 
+//NAME INPUT FIELD//
 #name {
-  margin-top: 4px;
-  margin-bottom: 16px;
-  height: 36px;
-  border-radius: 4px;
+  margin-top: 0.25rem;
+  margin-bottom: 1rem;
+  height: 2.25rem;
+  border-radius: 0.25rem;
   background-color: $alabaster;
   border-color: $mercury;
   background-color: $alabaster;
   border-style: solid;
   outline-color: $black;
-  border-width: 1px;
-  padding: 12px;
+  border-width: 0.0625rem;
+  padding: 0.75rem;
 
   @include tablet {
-    height: 48px;
-    padding: 16px;
+    height: 3rem;
+    padding: 1rem;
   }
 
   @include desktop {
-    margin-right: 11px;
+    margin-right: 0.6875rem;
   }
 }
 
+//COMMENT INPUT FIELD//
 #comment {
-  margin-top: 4px;
-  margin-bottom: 16px;
-  height: 100px;
-  border-radius: 4px;
+  margin-top: 0.25rem;
+  margin-bottom: 1rem;
+  height: 6.25rem;
+  border-radius: 0.25rem;
   background-color: $alabaster;
   border-color: $mercury;
   border-style: solid;
   outline-color: $black;
   resize: none;
-  padding: 12px;
+  padding: 0.75rem;
   font-family: "avenir-reg";
 
   @include tablet {
-    padding: 16px;
+    padding: 1rem;
   }
 
   @include desktop {
-    margin-right: 11px;
+    margin-right: 0.6875rem;
   }
-}
-
-.convo__lbl {
-  @include td-body-foot;
-  color: $silver;
-}
-
-.convo__title {
-  @include section-header;
-  padding-bottom: 16px;
-  color: $black;
-
-  @include tablet {
-    @include td-section-header;
-    padding-bottom: 36px;
-  }
-
-  @include desktop {
-    @include td-section-header;
-    margin-left: 3%;
-  }
-}
-
-.convo__btn {
-  @include button;
-
-  @include tablet {
-    width: 150px;
-    position: relative;
-    left: 71.5%;
-    margin-bottom: 4px;
-  }
-}
-
-//JS CLASSES FOR COMMENTS//
-.convo__comments {
-  display: flex;
-  flex-direction: column;
-
-  @include tablet {
-    width: 84%;
-    margin: auto;
-  }
-
-  @include desktop {
-    width: 628.16px;
-  }
-}
-
-.convo__indv-box {
-  display: flex;
-  flex-direction: row;
-  height: 140px;
-  border-bottom: 1px solid $mercury;
-
-  @include tablet {
-    height: 120px;
-  }
-
-  @include desktop {
-    margin-right: 11px;
-  }
-}
-
-.convo__sub-box {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  margin-top: 12px;
-  width: 80%;
-}
-
-.convo__avatar {
-  background-color: $mercury;
-  border-radius: 50%;
-  width: 36px;
-  height: 36px;
-  margin-top: 15px;
-  margin-right: 10px;
-
-  @include tablet {
-    width: 48px;
-    height: 48px;
-  }
-}
-
-.convo__avatar--background {
-  background-image: url(../assets/images/Mohan-muruge.jpg);
-  background-size: cover;
-  width: 36px;
-  height: 36px;
-  margin-top: 27px;
-
-  @include tablet {
-    width: 48px;
-    height: 48px;
-  }
-}
-
-.convo__indv-head {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  @include body-foot;
-}
-
-.convo__txt {
-  @include body-foot;
-  display: flex;
-  // flex-grow: 1;
-  margin-top: 5px;
-  // overflow: hidden;
-  // width: 100%;
-  @include tablet {
-    @include td-body-foot;
-  }
-}
-
-//NAMES OF COMMENTS//
-.convo__comm-name {
-  @include sub-header;
-  overflow: hidden;
-  width: 59%;
-}
-
-//DATES OF COMMENTS//
-.convo__comm-date {
-  color: $silver;
 }
