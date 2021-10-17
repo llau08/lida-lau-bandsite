@@ -9,9 +9,9 @@
 .hero {
   background-image: url(../assets/images/hero-shows.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: top;
   margin-top: 5rem;
-  height: 60vw;
+  height: 90vw;
   min-width: 320px;
   margin: auto;
   display: flex;
@@ -19,15 +19,15 @@
   position: relative;
 
   @include tablet {
-    background-position: bottom;
-    height: 58vw;
+    background-position: center;
+    height: 70vw;
     padding-left: 2.25rem;
-    padding-right: 2.25rem;
   }
 
   @include desktop {
-    background-position: center -4rem;
-    height: 46vw;
+    background-position: center -8rem;
+    padding-left: 5rem;
+    height: 50vw;
   }
 
   /*<---Overlay Background--->*/
@@ -45,134 +45,258 @@
     padding-right: 1rem;
 
     @include tablet {
-      padding-left: 2.25rem;
-      padding-right: 2.25rem;
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
     }
 
     @include desktop {
+      flex-direction: row;
+      flex-wrap: wrap;
       padding-left: 5rem;
       padding-right: 5rem;
+      justify-content: space-between;
+    }
+  }
+
+  // Beautiful Beasts Album Header//
+  &__album-title {
+    margin-top: 5%;
+    padding-top: 24px;
+    padding-bottom: 16px;
+    @include body-foot;
+    color: $white;
+    z-index: 1;
+
+    @include tablet {
+      @include td-sub-header;
+      margin-top: 6%;
+      padding-left: 0;
+    }
+
+    @include desktop {
+      margin-top: 17%;
+      width: 100%;
+      height: 2rem;
+      padding: 0;
     }
   }
 
   /*<---Queen of Yellow Logo--->*/
 
   &__header {
-    padding-left: 16px;
-    padding-right: 16px;
-    display: flex;
     color: $white;
-    max-width: 15rem;
     z-index: 1;
+    max-width: 15rem;
     @include page-header;
+
+    @include tablet {
+      @include td-page-header;
+      max-width: 32rem;
+      padding-left: 0;
+    }
+
+    @include desktop {
+      max-width: 30rem;
+      margin-bottom: 20%;
+    }
   }
 }
 
-//MINI HERO HEADER//
-.hero__album-title {
-  padding: 24px 16px 16px 16px;
-  @include body-foot;
-  color: $white;
-  z-index: 1;
-}
-
 .hero__song {
-  height: 30%;
+  margin-top: 6%;
+  height: 30vw;
+  border-style: unset;
+  border-bottom-left-radius: 4px;
+
+  @include tablet {
+    margin-top: 36px;
+    height: 22vw;
+    width: 54vw;
+  }
+
+  @include desktop {
+    height: 11.5vw;
+    width: 35vw;
+    margin-top: 0;
+    margin-right: 5%;
+  }
 }
 
 //SHOW SECTION//
 .shows {
-  padding: 24px 16px 16px 16px;
+  padding-top: 24px;
+  padding-bottom: 16px;
   width: 320px;
 
   @include tablet {
+    padding: 48px 36px 36px 36px;
     width: 768px;
   }
 
   @include desktop {
-    width: 1280px;
-  }
-}
-
-.shows__table {
-  width: 100%;
-}
-
-.shows__dates,
-.shows__venues,
-.shows__locations {
-  display: flex;
-  flex-direction: column;
-  // background-color: $mercury;
-}
-
-.shows__dates:before {
-  content: "DATE";
-
-  @include tablet {
-    display: none;
-  }
-}
-
-.shows__venues:before {
-  content: "VENUE";
-  @include tablet {
-    display: none;
-  }
-}
-
-.shows__locations:before {
-  content: "LOCATION";
-  @include tablet {
-    display: none;
-  }
-}
-
-th {
-  display: none;
-
-  @include label-btn;
-  color: $silver;
-
-  @include tablet {
-    display: table-cell;
-  }
-}
-.selected {
-  background-color: $mercury !important;
-}
-
-.shows__row {
-  display: flex;
-  flex-direction: column;
-  // &:active {
-  //   background-color: $mercury;
-  // }
-  &:hover {
-    background-color: $alabaster;
-  }
-
-  @include tablet {
+    margin: auto;
+    width: 1120px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding-top: 36px;
-    border-bottom: 1px solid $mercury;
+    padding-left: 0;
+    justify-content: space-between;
   }
-}
 
-.shows__hrow {
-  @extend .shows__row;
-  border-bottom: none;
-  justify-content: space-between;
-}
+  &__title {
+    padding-left: 16px;
+    padding-bottom: 16px;
+    @include section-header;
 
-//BUTTONS//
-.shows__btn {
-  width: 100%;
-  @include button;
+    @include tablet {
+      @include td-section-header;
+    }
 
-  @include tablet {
-    width: 150px;
+    @include desktop {
+      padding-left: 0;
+    }
+  }
+
+  &__table {
+    width: 100%;
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    @include desktop {
+      width: 80%;
+    }
+  }
+
+  &__dates {
+    display: flex;
+    font-weight: bolder;
+    flex-direction: column;
+    padding-bottom: 16px;
+    @include body-foot;
+
+    @include tablet {
+      justify-content: left;
+      align-self: center;
+      height: 25%;
+      width: 25%;
+      padding: 0;
+      margin-right: 18px;
+    }
+  }
+
+  &__venues,
+  &__locations {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 16px;
+    @include body-foot;
+
+    @include tablet {
+      justify-content: left;
+      align-self: center;
+      height: 25%;
+      width: 25%;
+      padding: 0;
+      margin-right: 18px;
+    }
+  }
+
+  &__dates:before {
+    content: "DATE";
+    font-weight: normal;
+    color: $silver;
+    @include body-foot;
+    padding-top: 16px;
+    padding-bottom: 5px;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__venues:before {
+    content: "VENUE";
+    color: $silver;
+    padding-bottom: 5px;
+    @include body-foot;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__locations:before {
+    content: "LOCATION";
+    color: $silver;
+    padding-bottom: 5px;
+    @include body-foot;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  //Shows "Buy Tickets" Button//
+  &__btn {
+    width: 100%;
+    margin-bottom: 16px;
+    @include button;
+
+    @include tablet {
+      margin: 0;
+      width: 150px;
+      @include td-body-foot;
+    }
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid $mercury;
+    padding-left: 16px;
+    padding-right: 16px;
+    &:hover {
+      background-color: $alabaster;
+    }
+
+    @include tablet {
+      flex-direction: row;
+      width: 100%;
+      justify-content: space-between;
+      padding-top: 24px;
+      padding-bottom: 24px;
+      padding-left: 18px;
+      padding-right: 18px;
+      border-bottom: 1px solid $mercury;
+    }
+  }
+  //Table Header Row saying "DATE/VENUE/LOCATION"//
+  &__hrow {
+    @extend .shows__row;
+    border-bottom: none;
+  }
+  // Added style for selecting row//
+  .selected {
+    background-color: $mercury !important;
+  }
+
+  th {
+    display: none;
+    @include label-btn;
+    color: $mercury;
+
+    @include tablet {
+      display: table-cell;
+      @include td-body-foot;
+      color: $silver;
+      width: 21%;
+      text-align: left;
+    }
+
+    @include desktop {
+      width: 18%;
+    }
   }
 }

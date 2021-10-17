@@ -635,17 +635,18 @@
 
 .convo {
   padding: 24px 16px 16px 16px;
-  width: 320px;
+  width: 20rem;
 }
 @media screen and (min-width: 768px) {
   .convo {
     padding: 48px 36px 20px 36px;
-    width: 768px;
+    width: 48rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .convo {
     margin: auto;
+    width: 1280px;
   }
 }
 
@@ -670,7 +671,8 @@
 }
 @media screen and (min-width: 1280px) {
   .convo__form-submit {
-    width: 59rem;
+    width: 52%;
+    border-bottom: 1px solid #e1e1e1;
   }
 }
 
@@ -685,7 +687,18 @@
   border-style: solid;
   outline-color: #323232;
   border-width: 1px;
-  padding: 10px;
+  padding: 12px;
+}
+@media screen and (min-width: 768px) {
+  #name {
+    height: 48px;
+    padding: 16px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  #name {
+    margin-right: 11px;
+  }
 }
 
 #comment {
@@ -698,20 +711,32 @@
   border-style: solid;
   outline-color: #323232;
   resize: none;
-  padding: 10px;
+  padding: 12px;
   font-family: "avenir-reg";
+}
+@media screen and (min-width: 768px) {
+  #comment {
+    padding: 16px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  #comment {
+    margin-right: 11px;
+  }
 }
 
 .convo__lbl {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
   font-family: "avenir-reg";
   color: #afafaf;
-  font-size: 10px;
 }
 
 .convo__title {
   font-size: 1.5rem;
   line-height: 2rem;
   font-family: "avenir-demi";
+  padding-bottom: 16px;
   color: #323232;
 }
 @media screen and (min-width: 768px) {
@@ -719,6 +744,7 @@
     font-size: 2.25rem;
     line-height: 2.75rem;
     font-family: "avenir-demi";
+    padding-bottom: 36px;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -726,6 +752,7 @@
     font-size: 2.25rem;
     line-height: 2.75rem;
     font-family: "avenir-demi";
+    margin-left: 3%;
   }
 }
 
@@ -745,7 +772,8 @@
   .convo__btn {
     width: 150px;
     position: relative;
-    left: 70.4%;
+    left: 71.5%;
+    margin-bottom: 4px;
   }
 }
 
@@ -761,7 +789,7 @@
 }
 @media screen and (min-width: 1280px) {
   .convo__comments {
-    width: 59rem;
+    width: 628.16px;
   }
 }
 
@@ -773,7 +801,12 @@
 }
 @media screen and (min-width: 768px) {
   .convo__indv-box {
-    height: 100px;
+    height: 120px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .convo__indv-box {
+    margin-right: 11px;
   }
 }
 
@@ -829,6 +862,13 @@
   font-family: "avenir-reg";
   display: flex;
   margin-top: 5px;
+}
+@media screen and (min-width: 768px) {
+  .convo__txt {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-family: "avenir-reg";
+  }
 }
 
 .convo__comm-name {

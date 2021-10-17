@@ -307,9 +307,9 @@
 .hero {
   background-image: url(../assets/images/hero-shows.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: top;
   margin-top: 5rem;
-  height: 60vw;
+  height: 90vw;
   min-width: 320px;
   margin: auto;
   display: flex;
@@ -320,16 +320,16 @@
 }
 @media screen and (min-width: 768px) {
   .hero {
-    background-position: bottom;
-    height: 58vw;
+    background-position: center;
+    height: 70vw;
     padding-left: 2.25rem;
-    padding-right: 2.25rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .hero {
-    background-position: center -4rem;
-    height: 46vw;
+    background-position: center -8rem;
+    padding-left: 5rem;
+    height: 50vw;
   }
 }
 .hero__overlay {
@@ -347,135 +347,227 @@
 }
 @media screen and (min-width: 768px) {
   .hero__overlay {
-    padding-left: 2.25rem;
-    padding-right: 2.25rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .hero__overlay {
+    flex-direction: row;
+    flex-wrap: wrap;
     padding-left: 5rem;
     padding-right: 5rem;
+    justify-content: space-between;
   }
 }
-.hero__header {
-  padding-left: 16px;
-  padding-right: 16px;
-  display: flex;
-  color: #ffffff;
-  max-width: 15rem;
-  z-index: 1;
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-family: "avenir-demi";
-}
-
 .hero__album-title {
-  padding: 24px 16px 16px 16px;
+  margin-top: 5%;
+  padding-top: 24px;
+  padding-bottom: 16px;
   font-size: 0.8125rem;
   line-height: 1.125rem;
   font-family: "avenir-reg";
   color: #ffffff;
   z-index: 1;
 }
+@media screen and (min-width: 768px) {
+  .hero__album-title {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-family: "avenir-demi";
+    margin-top: 6%;
+    padding-left: 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__album-title {
+    margin-top: 17%;
+    width: 100%;
+    height: 2rem;
+    padding: 0;
+  }
+}
+.hero__header {
+  color: #ffffff;
+  z-index: 1;
+  max-width: 15rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: "avenir-demi";
+}
+@media screen and (min-width: 768px) {
+  .hero__header {
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+    font-family: "avenir-demi";
+    max-width: 32rem;
+    padding-left: 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__header {
+    max-width: 30rem;
+    margin-bottom: 20%;
+  }
+}
 
 .hero__song {
-  height: 30%;
+  margin-top: 6%;
+  height: 30vw;
+  border-style: unset;
+  border-bottom-left-radius: 4px;
+}
+@media screen and (min-width: 768px) {
+  .hero__song {
+    margin-top: 36px;
+    height: 22vw;
+    width: 54vw;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__song {
+    height: 11.5vw;
+    width: 35vw;
+    margin-top: 0;
+    margin-right: 5%;
+  }
 }
 
 .shows {
-  padding: 24px 16px 16px 16px;
+  padding-top: 24px;
+  padding-bottom: 16px;
   width: 320px;
 }
 @media screen and (min-width: 768px) {
   .shows {
+    padding: 48px 36px 36px 36px;
     width: 768px;
   }
 }
 @media screen and (min-width: 1280px) {
   .shows {
-    width: 1280px;
+    margin: auto;
+    width: 1120px;
+    display: flex;
+    padding-left: 0;
+    justify-content: space-between;
   }
 }
-
+.shows__title {
+  padding-left: 16px;
+  padding-bottom: 16px;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: "avenir-demi";
+}
+@media screen and (min-width: 768px) {
+  .shows__title {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-family: "avenir-demi";
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows__title {
+    padding-left: 0;
+  }
+}
 .shows__table {
   width: 100%;
 }
-
-.shows__dates,
-.shows__venues,
-.shows__locations {
+@media screen and (min-width: 768px) {
+  .shows__table {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows__table {
+    width: 80%;
+  }
+}
+.shows__dates {
+  display: flex;
+  font-weight: bolder;
+  flex-direction: column;
+  padding-bottom: 16px;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-family: "avenir-reg";
+}
+@media screen and (min-width: 768px) {
+  .shows__dates {
+    justify-content: left;
+    align-self: center;
+    height: 25%;
+    width: 25%;
+    padding: 0;
+    margin-right: 18px;
+  }
+}
+.shows__venues, .shows__locations {
   display: flex;
   flex-direction: column;
+  padding-bottom: 16px;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-family: "avenir-reg";
 }
-
+@media screen and (min-width: 768px) {
+  .shows__venues, .shows__locations {
+    justify-content: left;
+    align-self: center;
+    height: 25%;
+    width: 25%;
+    padding: 0;
+    margin-right: 18px;
+  }
+}
 .shows__dates:before {
   content: "DATE";
+  font-weight: normal;
+  color: #afafaf;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-family: "avenir-reg";
+  padding-top: 16px;
+  padding-bottom: 5px;
 }
 @media screen and (min-width: 768px) {
   .shows__dates:before {
     display: none;
   }
 }
-
 .shows__venues:before {
   content: "VENUE";
+  color: #afafaf;
+  padding-bottom: 5px;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-family: "avenir-reg";
 }
 @media screen and (min-width: 768px) {
   .shows__venues:before {
     display: none;
   }
 }
-
 .shows__locations:before {
   content: "LOCATION";
+  color: #afafaf;
+  padding-bottom: 5px;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-family: "avenir-reg";
 }
 @media screen and (min-width: 768px) {
   .shows__locations:before {
     display: none;
   }
 }
-
-th {
-  display: none;
-  font-size: 0.625rem;
-  line-height: 1.25rem;
-  font-family: "avenir-bold";
-  color: #afafaf;
-}
-@media screen and (min-width: 768px) {
-  th {
-    display: table-cell;
-  }
-}
-
-.selected {
-  background-color: #e1e1e1 !important;
-}
-
-.shows__row, .shows__hrow {
-  display: flex;
-  flex-direction: column;
-}
-.shows__row:hover, .shows__hrow:hover {
-  background-color: #fafafa;
-}
-@media screen and (min-width: 768px) {
-  .shows__row, .shows__hrow {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding-top: 36px;
-    border-bottom: 1px solid #e1e1e1;
-  }
-}
-
-.shows__hrow {
-  border-bottom: none;
-  justify-content: space-between;
-}
-
 .shows__btn {
   width: 100%;
+  margin-bottom: 16px;
   background-color: #323232;
   cursor: pointer;
   color: #ffffff;
@@ -489,6 +581,61 @@ th {
 }
 @media screen and (min-width: 768px) {
   .shows__btn {
+    margin: 0;
     width: 150px;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-family: "avenir-reg";
+  }
+}
+.shows__row, .shows__hrow {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #e1e1e1;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.shows__row:hover, .shows__hrow:hover {
+  background-color: #fafafa;
+}
+@media screen and (min-width: 768px) {
+  .shows__row, .shows__hrow {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    padding-left: 18px;
+    padding-right: 18px;
+    border-bottom: 1px solid #e1e1e1;
+  }
+}
+.shows__hrow {
+  border-bottom: none;
+}
+.shows .selected {
+  background-color: #e1e1e1 !important;
+}
+.shows th {
+  display: none;
+  font-size: 0.625rem;
+  line-height: 1.25rem;
+  font-family: "avenir-bold";
+  color: #e1e1e1;
+}
+@media screen and (min-width: 768px) {
+  .shows th {
+    display: table-cell;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-family: "avenir-reg";
+    color: #afafaf;
+    width: 21%;
+    text-align: left;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows th {
+    width: 18%;
   }
 }/*# sourceMappingURL=shows.css.map */

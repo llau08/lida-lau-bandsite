@@ -292,19 +292,20 @@
   }
 }
 
-//COMMENT FORM SECTION//
+//COMMENTS SECTION//
 
 .convo {
   padding: 24px 16px 16px 16px;
-  width: 320px;
+  width: 20rem;
 
   @include tablet {
     padding: 48px 36px 20px 36px;
-    width: 768px;
+    width: 48rem;
   }
 
   @include desktop {
     margin: auto;
+    width: 1280px;
   }
 }
 
@@ -327,7 +328,8 @@
   }
 
   @include desktop {
-    width: 59rem;
+    width: 52%;
+    border-bottom: 1px solid $mercury;
   }
 }
 
@@ -342,7 +344,16 @@
   border-style: solid;
   outline-color: $black;
   border-width: 1px;
-  padding: 10px;
+  padding: 12px;
+
+  @include tablet {
+    height: 48px;
+    padding: 16px;
+  }
+
+  @include desktop {
+    margin-right: 11px;
+  }
 }
 
 #comment {
@@ -355,26 +366,36 @@
   border-style: solid;
   outline-color: $black;
   resize: none;
-  padding: 10px;
+  padding: 12px;
   font-family: "avenir-reg";
+
+  @include tablet {
+    padding: 16px;
+  }
+
+  @include desktop {
+    margin-right: 11px;
+  }
 }
 
 .convo__lbl {
-  font-family: "avenir-reg";
+  @include td-body-foot;
   color: $silver;
-  font-size: 10px;
 }
 
 .convo__title {
   @include section-header;
+  padding-bottom: 16px;
   color: $black;
 
   @include tablet {
     @include td-section-header;
+    padding-bottom: 36px;
   }
 
   @include desktop {
     @include td-section-header;
+    margin-left: 3%;
   }
 }
 
@@ -384,7 +405,8 @@
   @include tablet {
     width: 150px;
     position: relative;
-    left: 70.4%;
+    left: 71.5%;
+    margin-bottom: 4px;
   }
 }
 
@@ -399,7 +421,7 @@
   }
 
   @include desktop {
-    width: 59rem;
+    width: 628.16px;
   }
 }
 
@@ -410,7 +432,11 @@
   border-bottom: 1px solid $mercury;
 
   @include tablet {
-    height: 100px;
+    height: 120px;
+  }
+
+  @include desktop {
+    margin-right: 11px;
   }
 }
 
@@ -463,6 +489,9 @@
   margin-top: 5px;
   // overflow: hidden;
   // width: 100%;
+  @include tablet {
+    @include td-body-foot;
+  }
 }
 
 //NAMES OF COMMENTS//
