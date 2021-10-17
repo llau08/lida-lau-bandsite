@@ -331,18 +331,6 @@
   }
 }
 
-.convo__avatar--background {
-  background-image: url(../assets/images/Mohan-muruge.jpg);
-  background-size: cover;
-  width: 36px;
-  height: 36px;
-
-  @include tablet {
-    width: 48px;
-    height: 48px;
-  }
-}
-
 #name {
   margin-top: 4px;
   margin-bottom: 16px;
@@ -353,6 +341,7 @@
   background-color: $alabaster;
   border-style: solid;
   outline-color: $black;
+  border-width: 1px;
   padding: 10px;
 }
 
@@ -419,7 +408,6 @@
   flex-direction: row;
   height: 140px;
   border-bottom: 1px solid $mercury;
-  overflow-block: hidden;
 
   @include tablet {
     height: 100px;
@@ -429,10 +417,9 @@
 .convo__sub-box {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  flex-wrap: wrap;
   flex-grow: 1;
   margin-top: 12px;
+  width: 80%;
 }
 
 .convo__avatar {
@@ -442,6 +429,19 @@
   height: 36px;
   margin-top: 15px;
   margin-right: 10px;
+
+  @include tablet {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+.convo__avatar--background {
+  background-image: url(../assets/images/Mohan-muruge.jpg);
+  background-size: cover;
+  width: 36px;
+  height: 36px;
+  margin-top: 27px;
 
   @include tablet {
     width: 48px;
@@ -459,13 +459,17 @@
 .convo__txt {
   @include body-foot;
   display: flex;
-  flex-grow: 1;
+  // flex-grow: 1;
   margin-top: 5px;
+  // overflow: hidden;
+  // width: 100%;
 }
 
 //NAMES OF COMMENTS//
 .convo__comm-name {
   @include sub-header;
+  overflow: hidden;
+  width: 59%;
 }
 
 //DATES OF COMMENTS//

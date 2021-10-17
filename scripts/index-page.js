@@ -15,7 +15,7 @@ let comments = [{
 {
     name: 'Miles Acosta',
     date: '12/20/2020',
-    note: 'I cant stop listening. Every time I hear one of their songs-the vocals-it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Cant get enough.'
+    note: "I can't stop listening. Every time I hear one of their songs-the vocals-it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough."
 }];
 
 function displayComment(comm){

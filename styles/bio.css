@@ -674,19 +674,6 @@
   }
 }
 
-.convo__avatar--background {
-  background-image: url(../assets/images/Mohan-muruge.jpg);
-  background-size: cover;
-  width: 36px;
-  height: 36px;
-}
-@media screen and (min-width: 768px) {
-  .convo__avatar--background {
-    width: 48px;
-    height: 48px;
-  }
-}
-
 #name {
   margin-top: 4px;
   margin-bottom: 16px;
@@ -697,6 +684,7 @@
   background-color: #fafafa;
   border-style: solid;
   outline-color: #323232;
+  border-width: 1px;
   padding: 10px;
 }
 
@@ -782,7 +770,6 @@
   flex-direction: row;
   height: 140px;
   border-bottom: 1px solid #e1e1e1;
-  overflow-block: hidden;
 }
 @media screen and (min-width: 768px) {
   .convo__indv-box {
@@ -793,10 +780,9 @@
 .convo__sub-box {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  flex-wrap: wrap;
   flex-grow: 1;
   margin-top: 12px;
+  width: 80%;
 }
 
 .convo__avatar {
@@ -809,6 +795,20 @@
 }
 @media screen and (min-width: 768px) {
   .convo__avatar {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+.convo__avatar--background {
+  background-image: url(../assets/images/Mohan-muruge.jpg);
+  background-size: cover;
+  width: 36px;
+  height: 36px;
+  margin-top: 27px;
+}
+@media screen and (min-width: 768px) {
+  .convo__avatar--background {
     width: 48px;
     height: 48px;
   }
@@ -828,7 +828,6 @@
   line-height: 1.125rem;
   font-family: "avenir-reg";
   display: flex;
-  flex-grow: 1;
   margin-top: 5px;
 }
 
@@ -836,6 +835,8 @@
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-family: "avenir-demi", "sans-serif";
+  overflow: hidden;
+  width: 59%;
 }
 
 .convo__comm-date {

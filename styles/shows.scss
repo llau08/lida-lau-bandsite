@@ -103,6 +103,7 @@
 .shows__locations {
   display: flex;
   flex-direction: column;
+  // background-color: $mercury;
 }
 
 .shows__dates:before {
@@ -137,10 +138,19 @@ th {
     display: table-cell;
   }
 }
+.selected {
+  background-color: $mercury !important;
+}
 
 .shows__row {
   display: flex;
   flex-direction: column;
+  // &:active {
+  //   background-color: $mercury;
+  // }
+  &:hover {
+    background-color: $alabaster;
+  }
 
   @include tablet {
     display: flex;
