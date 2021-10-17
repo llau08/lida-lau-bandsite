@@ -374,13 +374,13 @@
     font-size: 1.5rem;
     line-height: 2rem;
     font-family: "avenir-demi", "sans-serif";
-    margin-top: 6%;
+    margin-top: 8%;
     padding-left: 0;
   }
 }
 @media screen and (min-width: 1280px) {
   .hero__album-title {
-    margin-top: 17%;
+    margin-top: 20%;
     width: 100%;
     height: 2rem;
     padding: 0;
@@ -412,7 +412,7 @@
 
 .hero__song {
   margin-top: 6%;
-  height: 30vw;
+  height: 35vw;
   border-style: unset;
   border-bottom-left-radius: 0.25rem;
 }
@@ -425,9 +425,9 @@
 }
 @media screen and (min-width: 1280px) {
   .hero__song {
-    height: 11.5vw;
-    width: 35vw;
-    margin-top: 0;
+    height: 11vw;
+    width: 33vw;
+    margin-top: 2px;
     margin-right: 5%;
   }
 }
