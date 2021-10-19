@@ -89,7 +89,7 @@ showsTable.appendChild(tBody);
     let tButton = document.createElement('button');
     tButton.classList.add('shows__btn')
     tButton.innerText = 'BUY TICKETS';
-    tButton.setAttribute("onclick", "location.href='./shows.html';")
+    // tButton.setAttribute("onclick", "location.href='./shows.html';")
 
     tBody.appendChild(tRow);
     tRow.appendChild(tDates);

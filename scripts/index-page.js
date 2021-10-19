@@ -1,22 +1,33 @@
+const apiURL = "https://project-1-api.herokuapp.com/";
+const apiKey = "1158e45f-b3ed-4a56-852a-8d3d3cc13661";
+
+axios.get(`${apiURL}comments/?api_key=${apiKey}`).then(response =>{
+    console.log(response);
+    for (let i=0; i < response.data.length; i++){
+        displayComment(response.data[i]);
+    };
+});
+
+
 const commentBox = document.querySelector('.convo__comments');
 const commentTextBox = document.getElementById('comment');
 const commentNameBox = document.getElementById('name');
 
-let comments = [{
-    name: 'Connor Walton',
-    date: '02/17/2021',
-    note: 'This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.',
-},
-{
-    name: 'Emilie Beach',
-    date: '01/09/2021',
-    note: 'I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.',
-},
-{
-    name: 'Miles Acosta',
-    date: '12/20/2020',
-    note: "I can't stop listening. Every time I hear one of their songs-the vocals-it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough."
-}];
+// let comments = [{
+//     name: 'Connor Walton',
+//     date: '02/17/2021',
+//     note: 'This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.',
+// },
+// {
+//     name: 'Emilie Beach',
+//     date: '01/09/2021',
+//     note: 'I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.',
+// },
+// {
+//     name: 'Miles Acosta',
+//     date: '12/20/2020',
+//     note: "I can't stop listening. Every time I hear one of their songs-the vocals-it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough."
+// }];
 
 function displayComment(comm){
 const singleComm = document.createElement('article');
@@ -57,23 +68,21 @@ pName.innerText = comm.name;
 const pDate = document.createElement('p');
 pDate.classList.add('convo__comm-date')
 commHead.appendChild(pDate);
-pDate.innerText = comm.date;
+pDate.innerText = changeDate(comm.timestamp);
 
 const pTxt = document.createElement('p');
 pTxt.classList.add('convo__comm-txt')
 commTxt.appendChild(pTxt);
-pTxt.innerText = comm.note;
+pTxt.innerText = comm.comment;
 }
 
-for (let i=0; i < comments.length; i++){
-    displayComment(comments[i]);
-};
+// for (let i=0; i < comments.length; i++){
+//     displayComment(comments[i]);
+// };
 
+function changeDate(timestamp){
+    let today = new Date(Number.parseInt(timestamp));
 
-const form = document.querySelector('.convo__form');
-form.addEventListener('submit', function (event) {
-    event.preventDefault();
-    let today = new Date();
     let numMonth = today.getMonth() + 1;
     let numDay = today.getDate();
     let numYear = today.getFullYear();
@@ -87,7 +96,26 @@ form.addEventListener('submit', function (event) {
     }
 
     today = numMonth + "/" + numDay + "/" + numYear; 
+    return today
+}
 
+const form = document.querySelector('.convo__form');
+form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    // let today = new Date();
+    // let numMonth = today.getMonth() + 1;
+    // let numDay = today.getDate();
+    // let numYear = today.getFullYear();
+
+    // if (numMonth <= 9) {
+    //     numMonth = '0' + numMonth;
+    // };
+
+    // if (numDay <= 9) {
+    //     numDay = "0" + numDay;
+    // }
+
+    // today = numMonth + "/" + numDay + "/" + numYear; 
 
     const newComm = {
         name: event.target.name.value,
@@ -106,3 +134,4 @@ form.addEventListener('submit', function (event) {
 commentTextBox.addEventListener("click", () => {
     commentTextBox.innerText = "";
 })
+
