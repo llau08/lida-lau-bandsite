@@ -32,6 +32,13 @@ axios.get(`${apiURL}comments/?api_key=${apiKey}`).then(response =>{
 }
 })
 
+.catch((error) =>{
+  console.log(error);
+});
+
+
+
+
 const showContainer = document.querySelector('.shows');
 
 //ARRAY OF OBJECTS//
