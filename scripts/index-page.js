@@ -3,11 +3,18 @@ const apiKey = "1158e45f-b3ed-4a56-852a-8d3d3cc13661";
 
 axios.get(`${apiURL}comments/?api_key=${apiKey}`).then(response =>{
     console.log(response);
-    for (let i=0; i < response.data.length; i++){
-        displayComment(response.data[i]);
-    };
-});
+    // for (let i=0; i < response.data.length; i++){
+    //     displayComment(response.data[i]);
+    // };
 
+    for (let i=response.data.length -1; i >= 3; i--){
+        console.log(i);
+        displayComment(response.data[i]);
+    }
+    for (let i=0; i <= 2; i++){
+        displayComment(response.data[i]);
+    }
+});
 
 const commentBox = document.querySelector('.convo__comments');
 const commentTextBox = document.getElementById('comment');
@@ -76,6 +83,8 @@ commTxt.appendChild(pTxt);
 pTxt.innerText = comm.comment;
 }
 
+
+
 // for (let i=0; i < comments.length; i++){
 //     displayComment(comments[i]);
 // };
@@ -119,14 +128,34 @@ form.addEventListener('submit', function (event) {
 
     const newComm = {
         name: event.target.name.value,
-        date: today,
-        note: event.target.comment.value
+        // date: today,
+        comment: event.target.comment.value
     };
-    comments.unshift(newComm);
+
+    axios.post(`${apiURL}comments/?api_key=${apiKey}`, newComm)
+      .then(function (response) {
+        console.log(response);
+      })
+      .then (function (response){
+        axios.get(`${apiURL}comments/?api_key=${apiKey}`).then(response =>{
+            console.log(response.data.length -1);
+            for (let i=response.data.length -1; i >= 3; i--){
+                console.log(i);
+                displayComment(response.data[i]);
+            }
+            for (let i=0; i <= 2; i++){
+                displayComment(response.data[i]);
+            }
+      })
+    })
+      .catch(function (error) {
+        console.log(error);
+      });
+    // comments.unshift(newComm);
     commentBox.innerHTML = "";
 
-    for (let i=0; i < comments.length; i++){
-        displayComment(comments[i]);}
+    // for (let i=0; i < comments.length; i++){
+    //     displayComment(comments[i]);}
     form.reset();
 })
 
