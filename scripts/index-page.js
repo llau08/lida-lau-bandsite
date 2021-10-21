@@ -2,18 +2,17 @@ const apiURL = "https://project-1-api.herokuapp.com/";
 const apiKey = "1158e45f-b3ed-4a56-852a-8d3d3cc13661";
 
 axios.get(`${apiURL}comments/?api_key=${apiKey}`).then(response =>{
-    console.log(response);
-    // for (let i=0; i < response.data.length; i++){
-    //     displayComment(response.data[i]);
-    // };
 
-    for (let i=response.data.length -1; i >= 3; i--){
-        console.log(i);
-        displayComment(response.data[i]);
-    }
-    for (let i=0; i <= 2; i++){
-        displayComment(response.data[i]);
-    }
+    // response.data.forEach((element,i) => {
+    //     console.log(element);
+ 
+    // for (let i=response.data.length -1; i >= 3; i--){
+    //     console.log(i);
+    //     displayComment(response.data[i]);
+    // }
+    // for (let i=0; i <= 2; i++){
+    //     displayComment(response.data[i]);
+    // }
 });
 
 const commentBox = document.querySelector('.convo__comments');
@@ -111,24 +110,8 @@ function changeDate(timestamp){
 const form = document.querySelector('.convo__form');
 form.addEventListener('submit', function (event) {
     event.preventDefault();
-    // let today = new Date();
-    // let numMonth = today.getMonth() + 1;
-    // let numDay = today.getDate();
-    // let numYear = today.getFullYear();
-
-    // if (numMonth <= 9) {
-    //     numMonth = '0' + numMonth;
-    // };
-
-    // if (numDay <= 9) {
-    //     numDay = "0" + numDay;
-    // }
-
-    // today = numMonth + "/" + numDay + "/" + numYear; 
-
     const newComm = {
         name: event.target.name.value,
-        // date: today,
         comment: event.target.comment.value
     };
 
@@ -151,16 +134,16 @@ form.addEventListener('submit', function (event) {
       .catch(function (error) {
         console.log(error);
       });
-    // comments.unshift(newComm);
-    commentBox.innerHTML = "";
 
-    // for (let i=0; i < comments.length; i++){
-    //     displayComment(comments[i]);}
+    commentBox.innerHTML = "";
     form.reset();
 })
+
 
 //Click on the box and get rid of value//
 commentTextBox.addEventListener("click", () => {
     commentTextBox.innerText = "";
 })
-
+axios.put(`${apiURL}`),{
+    
+}

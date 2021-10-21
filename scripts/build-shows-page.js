@@ -3,22 +3,22 @@ const apiKey = "1158e45f-b3ed-4a56-852a-8d3d3cc13661";
 
 axios.get(`${apiURL}comments/?api_key=${apiKey}`).then(response =>{
   console.log(response);
-
-  for (let i = 0; i < response.data.length; i++) {
-    console.log(response.data[i]);
+  response.data.forEach((element,i) => {
+    console.log(element);
+      
     let tRow = document.createElement('tr');
     tRow.classList.add('shows__row');
     let tDates = document.createElement('td');
     tDates.classList.add('shows__dates');
-    tDates.innerText = response.data[i].date;
-    let tcDate = new Date(Number(response.data[i].date));
+    tDates.innerText = element.date;
+    let tcDate = new Date(Number(element.date));
     const options = {weekday: 'short', month: 'short', day: '2-digit', year: 'numeric', timeZone: 'America/New_York'};
-    tDates.innerText = new Date(Number(response.data[i].date)).toLocaleDateString('en-US', options).replace(/,/g,"");
+    tDates.innerText = new Date(Number(element.date)).toLocaleDateString('en-US', options).replace(/,/g,"");
     let tVenue = document.createElement('td');
-    tVenue.innerText = response.data[i].place;
+    tVenue.innerText = element.place;
     tVenue.classList.add('shows__venues');
     let tLocation = document.createElement('td');
-    tLocation.innerText = response.data[i].location;
+    tLocation.innerText = element.location;
     tLocation.classList.add('shows__locations');
     let tButton = document.createElement('button');
     tButton.classList.add('shows__btn')
@@ -29,55 +29,13 @@ axios.get(`${apiURL}comments/?api_key=${apiKey}`).then(response =>{
   tRow.appendChild(tVenue);
   tRow.appendChild(tLocation);
   tRow.appendChild(tButton);
-}
-})
-
-.catch((error) =>{
+  })
+}).catch((error)=>{
   console.log(error);
 });
 
 
-
-
 const showContainer = document.querySelector('.shows');
-
-//ARRAY OF OBJECTS//
-// const tix = [
-//   {
-//    date: 'Mon Sep 06 2021',
-//    venue: 'Ronald Lane',
-//    location: 'San Francisco, CA',
-//  },
- 
-//  {
-//    date: 'Tues Sept 21 2021',
-//    venue: 'Pier 3 East',
-//    location: 'San Francisco, CA',
-//  },
- 
-//  {
-//    date: 'Fri Oct 15 2021',
-//    venue: 'View Lounge',
-//    location: 'San Francisco, CA',
-//  },
- 
-//  {
-//    date: 'Sat Nov 06 2021',
-//    venue: 'Hyatt Agency',
-//    location: 'San Francisco, CA',
-//  },
- 
-//  {
-//    date: 'Fri Nov 26 2021',
-//    venue: 'Moscow Center',
-//    location: 'San Francisco, CA',
-//  },
- 
-//  {
-//    date: 'Wed Dec 15 2021',
-//    venue: 'Press Club',
-//    location: 'San Francisco, CA',
-//  }]
 
 //h2 SHOWS TITLE//
 const showTitle = document.createElement('h2');
@@ -114,31 +72,6 @@ thRow.appendChild(heading4);
 // TABLE BODY //
 let tBody = document.createElement('tbody');
 showsTable.appendChild(tBody);
-
-  // for (let i = 0; i < tix.length; i++) {
-  //   let tRow = document.createElement('tr');
-  //   tRow.classList.add('shows__row');
-  //   let tDates = document.createElement('td');
-  //   tDates.classList.add('shows__dates');
-  //   tDates.innerText = tix[i].date;
-  //   let tVenue = document.createElement('td');
-  //   tVenue.innerText = tix[i].place;
-  //   tVenue.classList.add('shows__venues');
-  //   let tLocation = document.createElement('td');
-  //   tLocation.innerText = tix[i].location;
-  //   tLocation.classList.add('shows__locations');
-  //   let tButton = document.createElement('button');
-  //   tButton.classList.add('shows__btn')
-  //   tButton.innerText = 'BUY TICKETS';
-
-    // tBody.appendChild(tRow);
-    // tRow.appendChild(tDates);
-    // tRow.appendChild(tVenue);
-    // tRow.appendChild(tLocation);
-    // tRow.appendChild(tButton);
-  // }
-
-
 
 const completeTR = document.querySelectorAll('.shows__row');
 
