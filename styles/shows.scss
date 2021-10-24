@@ -283,6 +283,9 @@
   &__hrow {
     @extend .shows__row;
     border-bottom: none;
+    &:hover {
+      background-color: white;
+    }
   }
   // Added style for selecting row//
   .selected {

@@ -612,6 +612,9 @@
 .shows__hrow {
   border-bottom: none;
 }
+.shows__hrow:hover {
+  background-color: white;
+}
 .shows .selected {
   background-color: #e1e1e1 !important;
 }

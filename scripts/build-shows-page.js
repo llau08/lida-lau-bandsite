@@ -29,7 +29,12 @@ axios.get(`${apiURL}comments/?api_key=${apiKey}`).then(response =>{
   tRow.appendChild(tVenue);
   tRow.appendChild(tLocation);
   tRow.appendChild(tButton);
+
+  tRow.addEventListener("click", (event) => {
+    tRow.classList.toggle('selected')
   })
+  })
+
 }).catch((error)=>{
   console.log(error);
 });
@@ -73,10 +78,5 @@ thRow.appendChild(heading4);
 let tBody = document.createElement('tbody');
 showsTable.appendChild(tBody);
 
-const completeTR = document.querySelectorAll('.shows__row');
 
-for (let i = 0; i < completeTR.length; i++) {
-  completeTR[i].addEventListener("click", (event) => {
-    completeTR[i].classList.toggle('selected')
-  })
-}
+
